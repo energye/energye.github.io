@@ -3,7 +3,7 @@ const latestVersion = require('../../../public/data/latest-version.json')
 
 export function navZH(): DefaultTheme.NavItem[] {
     return [
-        {text: "教程", link: "/course", activeMatch: "/course"},
+        {text: "教程", link: "/course/what-is-energy", activeMatch: "/course"},
         {text: "示例", link: "/examples", activeMatch: "/examples"},
         {text: "文档", link: "/document", activeMatch: "/document"},
         {

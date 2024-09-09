@@ -8,6 +8,7 @@ export default defineConfig({
     rewrites: {
         'zh/:rest*': ':rest*'
     },
+    outDir: "./docs/",
     lastUpdated: true,
     cleanUrls: true,
     metaChunk: true,

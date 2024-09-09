@@ -1,0 +1,36 @@
+.banner {
+    display: flex;
+    width: 100%;
+    margin-top: 60px;
+}
+
+.banner .item {
+    width: 33%;
+    margin: 10px;
+}
+
+:root {
+    --vp-home-hero-name-color: transparent;
+    --vp-home-hero-name-background: -webkit-linear-gradient(120deg, #42a0ff 30%, #2ba9f1);
+
+
+    --vp-home-hero-image-background-image: linear-gradient(-45deg, #6396ee 50%, #63b8f3 10%);
+    --vp-home-hero-image-filter: blur(44px);
+}
+
+@media (min-width: 640px) {
+    :root {
+        --vp-home-hero-image-filter: blur(56px);
+    }
+}
+
+@media (min-width: 960px) {
+    :root {
+        --vp-home-hero-image-filter: blur(68px);
+        --vp-home-hero-text-font-size: 6px;
+    }
+}
+
+.container .main .text {
+    font-size: 36px;
+}

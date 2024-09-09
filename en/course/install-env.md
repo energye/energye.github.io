@@ -157,4 +157,4 @@ ENERGY_HOME
 
 # Command line automatic installation rendering
 ## Windows
-![Description](https://assets.yanghy.cn/energy-doc/cmd-install.gif)
+![Description](/imgs/assets/cmd-install.gif)

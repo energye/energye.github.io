@@ -19,7 +19,7 @@ export const zh = defineConfig({
             next: '下一页'
         },
         editLink: {
-            pattern: 'https://github.com/energye/energye.github.io/tree/main/zh/:path',
+            pattern: 'https://github.com/energye/energye.github.io/tree/main/:path',
             text: '在 GitHub 上编辑此页面'
         },
         nav: navZH(),

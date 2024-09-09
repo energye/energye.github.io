@@ -8,7 +8,7 @@ export const en = defineConfig({
     description: "Base CEF",
     themeConfig: {
         editLink: {
-            pattern: 'https://github.com/energye/energye.github.io/tree/main/en/:path',
+            pattern: 'https://github.com/energye/energye.github.io/tree/main/:path',
             text: 'Edit this page on GitHub'
         },
         nav: navEN(),

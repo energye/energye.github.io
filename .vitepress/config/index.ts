@@ -12,6 +12,9 @@ export default defineConfig({
     lastUpdated: true,
     cleanUrls: true,
     metaChunk: true,
+    appearance: {
+        initialValue: 'dark'
+    },
     themeConfig: {
         logo: {src: "/imgs/icon.png", width: 24, height: 24},
         search: {provider: "local", options: localSearchConfig()},

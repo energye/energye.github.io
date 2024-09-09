@@ -1,8 +1,17 @@
-# data xxx.json file
+# data/xxx.json File
 
-- 命令行工具版本: command-line-tools.json
-- 最新发行版本号：latest-version.json 
-- 模块基础配置: model-base-config.json
-- 模块 CEF 配置: model-cef.json
-- 模块 liblcl 配置: model-liblcl.json
-- 版本升级配置: versions-upgrade.json
+### energy cli
+- energy cli version: [command-line-tools.json](/data/command-line-tools.json)
+
+### Latest Version
+- [latest-version.json](/data/latest-version.json)
+
+### Model Config
+- Base Config: [model-base-config.json](/data/model-base-config.json)
+- CEF Config: [model-cef.json](/data/model-cef.json)
+- LibLCL Config: [model-liblcl.json](/data/model-liblcl.json)
+- Module Readme: /data/model-README
+
+### Version Upgrade Config
+- [versions-upgrade.json](/data/versions-upgrade.json)
+- Version Upgrade Readme: /data/versions-upgrade-README

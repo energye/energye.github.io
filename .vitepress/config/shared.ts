@@ -18,6 +18,16 @@ export function head(): HeadConfig[] {
         ['meta', {property: 'google-site-verification', content: 'y1ft7YSwR6LAzQsR3s2OBajPkbLz16MDC809PgeHYfI'}],
         ['meta', {property: 'og:image', content: 'https://energye.github.io/imgs/energy.png'}],
         ['meta', {property: 'og:url', content: 'https://energye.github.io'}],
+        ['script', {},`
+window._hmt = window._hmt || [];
+(function() {
+  let hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?5c579ee49a29203cd8dff7fa8eda5ac9";
+  let s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+`
+        ],
     ]
 }
 

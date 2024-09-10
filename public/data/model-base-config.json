@@ -27,6 +27,54 @@
         "label": "cef-builds",
         "url": "https://cef-builds.spotifycdn.com/cef_binary_{version}_{OSARCH}_minimal.tar.bz2"
       }
+    },
+    "golang": {
+      "0": {
+        "label": "golang",
+        "version": "1.20.14",
+        "url": "https://golang.google.cn/dl/%s"
+      }
+    },
+    "nsis": {
+      "0": {
+        "label": "gitee",
+        "version": "3.09",
+        "url": "https://gitee.com/energye/assets/releases/download/environment/%s"
+      }
+    },
+    "nsis7z": {
+      "0": {
+        "label": "gitee",
+        "version": "19.00",
+        "url": "https://gitee.com/energye/assets/releases/download/environment/%s"
+      }
+    },
+    "7z": {
+      "0": {
+        "label": "gitee",
+        "version": "2301",
+        "url": "https://gitee.com/energye/assets/releases/download/environment/%s"
+      }
+    }
+  },
+  "const": {
+    "EnergyHomeKey": "ENERGY_HOME",
+    "GolanHomeKey": "GOROOT",
+    "NSISHomeKey": "NSIS_HOME",
+    "Z7ZHomeKey": "Z7Z_HOME"
+  },
+  "extract": {
+    "windows": {
+      "cef": ["Release/*", "Resources/*"],
+      "liblcl": ["liblcl.dll"]
+    },
+    "linux": {
+      "cef": ["Release/*", "Resources/*"],
+      "liblcl": ["liblcl.so"]
+    },
+    "darwin": {
+      "cef": ["Release/*"],
+      "liblcl": ["liblcl.dylib"]
     }
   }
 }

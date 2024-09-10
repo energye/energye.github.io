@@ -11,7 +11,7 @@ export function navZH(): DefaultTheme.NavItem[] {
             items: [
                 {
                     text: "更新日志",
-                    link: "https://gitee.com/energye/energy/blob/main/UpdateLog.md",
+                    link: "https://github.com/energye/energy/blob/main/UpdateLog.md",
                 },
                 {
                     text: "版本 3.0",
@@ -42,23 +42,23 @@ export function navZH(): DefaultTheme.NavItem[] {
                     items: [
                         {
                             text: "Go Energy",
-                            link: "https://gitee.com/energye/energy",
+                            link: "https://github.com/energye/energy",
                         },
                         {
                             text: "LCL",
-                            link: "https://gitee.com/energye/lcl",
+                            link: "https://github.com/energye/lcl",
                         },
                         {
                             text: "CEF",
-                            link: "https://gitee.com/energye/cef",
+                            link: "https://github.com/energye/cef",
                         },
                         {
                             text: "WebView2(wv)",
-                            link: "https://gitee.com/energye/wv",
+                            link: "https://github.com/energye/wv",
                         },
                         {
                             text: "Webkit(wk)",
-                            link: "https://gitee.com/energye/wk",
+                            link: "https://github.com/energye/wk",
                         },
                     ],
                 }

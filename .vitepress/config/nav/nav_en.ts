@@ -42,7 +42,7 @@ export function navEN(): DefaultTheme.NavItem[] {
                     items: [
                         {
                             text: "Go Energy",
-                            link: "https://gitee.com/energye/energy",
+                            link: "https://github.com/energye/energy",
                         },
                         {
                             text: "LCL",

@@ -180,7 +180,7 @@ const event = {
           // 下载地址占位符替换
           tmpUrl = tmpUrl.replace("{version}", "v" + module.v)
           tmpUrl = tmpUrl.replace("{module}", module.moduleName)
-          tmpUrl = tmpUrl.replace("{OSARCH}", tmpOSName)
+          tmpUrl = tmpUrl.replace("{OSARCH}", tmpOSName.toLowerCase())
           // 下载地址
           osURLs.push({
             label: tmpOSName,

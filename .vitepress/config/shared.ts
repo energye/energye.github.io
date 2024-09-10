@@ -25,9 +25,9 @@ export function footer() {
     const isGithub = process.env.DOC_ENV === "github"
     let footerMessage = ''
     if (!isGithub) {
-        footerMessage = `<a href="https://beian.miit.gov.cn" target="_blank" data-v-62fb13f4="">京ICP备2022011663号-1</a>`
+        footerMessage = `<a href="https://beian.miit.gov.cn" target="_blank" data-v-62fb13f4="">京ICP备2022011663号-1</a><br>`
     }
-    footerMessage += '<span style="color: #2ba9f1;"><br>GO<br>ENERGY</span>'
+    footerMessage += '<span style="color: #2ba9f1;">GO<br>ENERGY</span>'
     return {
         message: footerMessage,
         copyright: `Copyright © 2022-${new Date().getFullYear()} YangHY`,

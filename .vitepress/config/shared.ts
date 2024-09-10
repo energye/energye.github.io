@@ -1,8 +1,9 @@
 import {DefaultTheme, HeadConfig} from "vitepress";
-import {ref} from "vue";
+
+const isGithub = process.env.DOC_ENV === "github"
 
 export function head(): HeadConfig[] {
-    return [
+    let result: HeadConfig[] = [
         ["link", {rel: "icon", href: "/imgs/favicon.ico"}],
         // ['link', {rel: 'icon', type: 'image/svg+xml', href: '/vitepress-logo-mini.svg'}],
         ['link', {rel: 'icon', type: 'image/png', href: '/imgs/energy.png'}],
@@ -18,7 +19,9 @@ export function head(): HeadConfig[] {
         ['meta', {property: 'google-site-verification', content: 'y1ft7YSwR6LAzQsR3s2OBajPkbLz16MDC809PgeHYfI'}],
         ['meta', {property: 'og:image', content: 'https://energye.github.io/imgs/energy.png'}],
         ['meta', {property: 'og:url', content: 'https://energye.github.io'}],
-        ['script', {},`
+    ]
+    if (isGithub) { // energye.github.io
+        result.push(['script', {}, `
 window._hmt = window._hmt || [];
 (function() {
   let hm = document.createElement("script");
@@ -26,13 +29,22 @@ window._hmt = window._hmt || [];
   let s = document.getElementsByTagName("script")[0];
   s.parentNode.insertBefore(hm, s);
 })();
-`
-        ],
-    ]
+`])
+    } else { // energy.yanghy.cn
+        result.push(['script', {}, `
+window._hmt = window._hmt || [];
+(function() {
+  let hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?2a7685fd230a03733744de23eee6e731";
+  let s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+`])
+    }
+    return result
 }
 
 export function footer() {
-    const isGithub = process.env.DOC_ENV === "github"
     let footerMessage = ''
     if (!isGithub) {
         footerMessage = `<a href="https://beian.miit.gov.cn" target="_blank" data-v-62fb13f4="">京ICP备2022011663号-1</a><br>`

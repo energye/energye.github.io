@@ -71,6 +71,7 @@ function examples(): DefaultTheme.SidebarItem[] {
                         {text: 'Context Menu', link: 'context-menu'},
                         {text: 'OSR-Windows', link: 'osr-windows'},
                         {text: 'OSR-Linux', link: 'osr-linux'},
+                        {text: 'Frameless', link: 'frameless'},
                     ]
                 }
             ]
@@ -82,7 +83,9 @@ function document(): DefaultTheme.SidebarItem[] {
     return [
         {
             text: 'Document',
-            items: []
+            items: [
+                {text: 'Application', link: 'application'},
+            ]
         }
     ]
 }

@@ -72,6 +72,7 @@ function examples(): DefaultTheme.SidebarItem[] {
                         {text: '自定义右键菜单', link: 'context-menu'},
                         {text: 'OSR-Windows', link: 'osr-windows'},
                         {text: 'OSR-Linux', link: 'osr-linux'},
+                        {text: '无边框窗口', link: 'frameless'},
                     ]
                 }
             ]
@@ -83,7 +84,9 @@ function document(): DefaultTheme.SidebarItem[] {
     return [
         {
             text: '文档',
-            items: []
+            items: [
+                {text: 'Application', link: 'application'},
+            ]
         }
     ]
 }

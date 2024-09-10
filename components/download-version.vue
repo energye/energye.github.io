@@ -180,6 +180,7 @@ const event = {
           // 下载地址占位符替换
           tmpUrl = tmpUrl.replace("{version}", "v" + module.v)
           tmpUrl = tmpUrl.replace("{module}", module.moduleName)
+          // 当模块非 lcl 时，给下载链接的 osarch 全变成小写
           if (module.moduleName.indexOf("liblcl") === -1) {
             tmpOSName = tmpOSName.toLowerCase()
           }

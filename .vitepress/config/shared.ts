@@ -1,4 +1,5 @@
 import {DefaultTheme, HeadConfig} from "vitepress";
+import {ref} from "vue";
 
 export function head(): HeadConfig[] {
     return [
@@ -9,7 +10,10 @@ export function head(): HeadConfig[] {
         ['meta', {property: 'og:type', content: 'website'}],
         ['meta', {property: 'og:locale', content: 'cn'}],
         ['meta', {property: 'og:title', content: 'Go, based LCL & CEF, build cross-platform desktop application'}],
-        ['meta', {property: 'og:keywords', content: 'Energy,GoGUI,GolangGUI,桌面应用,跨平台GUI,跨平台桌面应用,开源GUI,GoCEF,GolangCEF,Go桌面应用,Golang桌面应用,Golang构建跨平台应用'}],
+        ['meta', {
+            property: 'og:keywords',
+            content: 'Energy,GoGUI,GolangGUI,桌面应用,跨平台GUI,跨平台桌面应用,开源GUI,GoCEF,GolangCEF,Go桌面应用,Golang桌面应用,Golang构建跨平台应用'
+        }],
         ['meta', {property: 'og:site_name', content: 'Go ENERGY'}],
         ['meta', {property: 'google-site-verification', content: 'y1ft7YSwR6LAzQsR3s2OBajPkbLz16MDC809PgeHYfI'}],
         ['meta', {property: 'og:image', content: 'https://energye.github.io/imgs/energy.png'}],
@@ -18,10 +22,14 @@ export function head(): HeadConfig[] {
 }
 
 export function footer() {
-    let footerMessage = `
+    const isGithub = process.env.DOC_ENV === "github"
+    let footerMessage = ''
+    if (!isGithub) {
+        footerMessage = `
 <a href="https://beian.miit.gov.cn" target="_blank" data-v-62fb13f4="">京ICP备2022011663号-1</a>
-<span style="color: #2ba9f1;"><br>GO<br>ENERGY</span>
 `
+    }
+    footerMessage += '<span style="color: #2ba9f1;"><br>GO<br>ENERGY</span>'
     return {
         message: footerMessage,
         copyright: `Copyright © 2022-${new Date().getFullYear()} YangHY`,

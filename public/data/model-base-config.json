@@ -57,7 +57,7 @@
       }
     }
   },
-  "const": {
+  "environment": {
     "EnergyHomeKey": "ENERGY_HOME",
     "GolanHomeKey": "GOROOT",
     "NSISHomeKey": "NSIS_HOME",
@@ -66,15 +66,15 @@
   "extract": {
     "windows": {
       "cef": ["Release/*", "Resources/*"],
-      "liblcl": ["liblcl.dll"]
+      "lcl": ["liblcl.dll"]
     },
     "linux": {
       "cef": ["Release/*", "Resources/*"],
-      "liblcl": ["liblcl.so"]
+      "lcl": ["liblcl.so"]
     },
     "darwin": {
       "cef": ["Release/*"],
-      "liblcl": ["liblcl.dylib"]
+      "lcl": ["liblcl.dylib"]
     }
   }
 }

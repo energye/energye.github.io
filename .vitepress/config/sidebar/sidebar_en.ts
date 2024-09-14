@@ -85,6 +85,7 @@ function document(): DefaultTheme.SidebarItem[] {
             text: 'Document',
             items: [
                 {text: 'Application', link: 'application'},
+                {text: 'IPC Event', link: 'ipc-event'},
             ]
         }
     ]

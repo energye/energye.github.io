@@ -177,13 +177,16 @@ const event = {
         if (tmpOSName.indexOf(osName) === 0) {
           let downloadSource = downloadSourceItem[moduleName][cfg.downloadSource]
           let tmpUrl = downloadSource.url
-          // 下载地址占位符替换
-          tmpUrl = tmpUrl.replace("{version}", "v" + module.v)
-          tmpUrl = tmpUrl.replace("{module}", module.moduleName)
+          let ver = module.v
           // 当模块非 lcl 时，给下载链接的 osarch 全变成小写
           if (module.moduleName.indexOf("liblcl") === -1) {
             tmpOSName = tmpOSName.toLowerCase()
+          } else {
+            ver = "v" + ver
           }
+          // 下载地址占位符替换
+          tmpUrl = tmpUrl.replace("{version}", ver)
+          tmpUrl = tmpUrl.replace("{module}", module.moduleName)
           tmpUrl = tmpUrl.replace("{OSARCH}", tmpOSName)
           // 下载地址
           osURLs.push({

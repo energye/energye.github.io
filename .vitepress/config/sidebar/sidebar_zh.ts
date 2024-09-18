@@ -1,6 +1,6 @@
 import {DefaultTheme} from "vitepress";
 
-export function sidebarZH(){
+export function sidebarZH() {
     return {
         '/course/': {base: '/course/', items: course()},
         '/examples/': {base: '/examples/', items: examples()},
@@ -88,6 +88,10 @@ function document(): DefaultTheme.SidebarItem[] {
                 {text: 'Application', link: 'application'},
                 {text: 'IPC Event', link: 'ipc-event'},
             ]
+        },
+        {
+            text: '版本升级',
+            link: 'version-upgrade-releases'
         }
     ]
 }

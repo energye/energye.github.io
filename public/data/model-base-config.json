@@ -57,12 +57,6 @@
       }
     }
   },
-  "environment": {
-    "EnergyHomeKey": "ENERGY_HOME",
-    "GolanHomeKey": "GOROOT",
-    "NSISHomeKey": "NSIS_HOME",
-    "Z7ZHomeKey": "Z7Z_HOME"
-  },
   "extract": {
     "windows": {
       "cef": ["Release/*", "Resources/*"],

@@ -87,6 +87,10 @@ function document(): DefaultTheme.SidebarItem[] {
                 {text: 'Application', link: 'application'},
                 {text: 'IPC Event', link: 'ipc-event'},
             ]
+        },
+        {
+            text: 'Version Upgrade',
+            link: 'version-upgrade-releases'
         }
     ]
 }

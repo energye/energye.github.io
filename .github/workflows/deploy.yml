@@ -66,8 +66,8 @@ jobs:
           move deploy.exe ../
           cd ../
           dir
-          ./deploy.exe -github=true -site=false -token='${AUTH_TOKEN}' -uploadURL='${UPLOAD_URL}'
-          ./deploy.exe -github=false -site=true -token='${AUTH_TOKEN}' -uploadURL='${UPLOAD_URL}'
+          ./deploy.exe -github=true -site=false
+          ./deploy.exe -github=false -site=true
 
   # 部署工作
   deploy:

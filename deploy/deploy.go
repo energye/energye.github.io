@@ -20,10 +20,10 @@ var (
 )
 
 func main() {
-	flag.BoolVar(&github, "github", false, "")
-	flag.BoolVar(&site, "site", false, "")
-	flag.StringVar(&token, "token", "", "")
-	flag.StringVar(&uploadURL, "uploadURL", "", "")
+	flag.BoolVar(&github, "github", false, "github")
+	flag.BoolVar(&site, "site", false, "site")
+	flag.StringVar(&token, "token", "", "token")
+	flag.StringVar(&uploadURL, "uploadURL", "", "uploadURL")
 	flag.Parse()
 	if !github && !site {
 		println("未指定参数 github 或 site")

@@ -23,6 +23,11 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Setup Golang
+        uses: actions/setup-go@v3
+        with:
+          go-version: '1.20'
+
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
@@ -31,16 +36,36 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v4
 
+      # 安装 依赖
       - name: Install Dependencies
         run: npm ci
 
-      - name: Build with VitePress
+      # 构建后在 docs 目录
+      - name: Build Github
         run: npm run build:github
 
+      # 构建后在 site 目录
+      - name: Build Site
+        run: npm run build
+
+      # 部署 pages energye.github.io
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./docs/
+
+      # 上传网站
+      - name: Upload site
+        env:
+          # 在github仓库当前项目配置设置
+          AUTH_TOKEN: ${{ secrets.UPLOAD_SITE_AUTH_TOKEN }}
+          UPLOAD_URL: ${{ secrets.UPLOAD_SITE_URL }}
+        run: |
+          cd ./deploy
+          go build deploy.go
+          move deploy.exe ../
+          .\deploy.exe -github -token=${AUTH_TOKEN} -uploadURL="${UPLOAD_URL}"
+          .\deploy.exe -site -token=${AUTH_TOKEN} -uploadURL="${UPLOAD_URL}"
 
   # 部署工作
   deploy:

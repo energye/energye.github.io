@@ -1,14 +1,21 @@
 import {defineConfig} from 'vitepress'
 import {en} from './en'
 import {zh} from './zh'
-import {head, footer, localSearchConfig, GiteeICO, GitCodeICO} from "./shared";
+import {footer, GitCodeICO, GiteeICO, head, localSearchConfig} from "./shared";
+
+const isGithub = process.env.DOC_ENV === "github"
+
+let outDir = "./docs/" // npm run build:github
+if (!isGithub) {
+    outDir = "./site/" // npm run build
+}
 
 export default defineConfig({
     title: "energy",
     rewrites: {
         'zh/:rest*': ':rest*'
     },
-    outDir: "./docs/",
+    outDir: outDir,
     lastUpdated: true,
     cleanUrls: true,
     metaChunk: true,

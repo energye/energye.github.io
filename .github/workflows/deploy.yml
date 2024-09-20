@@ -64,8 +64,9 @@ jobs:
           cd ./deploy
           go build deploy.go
           move deploy.exe ../
-          .\deploy.exe -github -token=${AUTH_TOKEN} -uploadURL="${UPLOAD_URL}"
-          .\deploy.exe -site -token=${AUTH_TOKEN} -uploadURL="${UPLOAD_URL}"
+          dir
+          ./deploy.exe -github -token=${AUTH_TOKEN} -uploadURL="${UPLOAD_URL}"
+          ./deploy.exe -site -token=${AUTH_TOKEN} -uploadURL="${UPLOAD_URL}"
 
   # 部署工作
   deploy:

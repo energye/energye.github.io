@@ -1,10 +1,40 @@
 # 使用命令行工具
 
 ---
-### energy
+### energy cli
+
+先获取 `energy cli`，可使用`预编译`需下载, 也可`自行编译`
+
+#### 系统使用
+- Windows
+> 打开 cmd，输入命令
+```cmd
+energy-xxx.exe [options] [args]
+```
+
+- MacOS 和 Linux
+> 需要给 `energy cli` 执行权限
+```cmd
+chmod +x enrgy-xxx
+```
+> MacOS
+> 
+> 1. 需要安装 xcode。 Golang 编译或运行时所需
+> 
+> 2. 第一次运行命令时会阻止其运行
+>> 打开 `系统偏好设置`，然后选择 `安全性与隐私`。
+>>
+>> 在 `通用` 选项卡下，如果看到提示 `已阻止使用xxx`，点击“仍要打开”以允许该应用程序运行。
+> 
+> 然后再次运行即可执行
+```cmd
+energy-xxx [options] [args]
+```
+
 
 ### 命令参数
 `energy [options]`
+
 |参数名|说明|
 |-|-|
 |install|环境安装|
@@ -18,7 +48,6 @@
 |gen|windows生成ico和syso|
 |bindata|小于go1.16版本内置资源到exe|
 
-详细的参数说明请在命令行执行时不添加`.`输出
 
 ---
 ### 命令参数详情
@@ -47,8 +76,8 @@
 |7z|配合NSIS压缩CEF|
 
 
-##### 默认CEF,liblcl安装当前系统架构
-CEF,liblcl根据当前系统环境安装
+##### CEF,liblcl
+安装当前所支持的系统架构
 
 |平台|CEF,liblcl|
 |-|-|
@@ -71,7 +100,7 @@ CEF,liblcl根据当前系统环境安装
 ---
 #### init- 应用初始化
 
-`energy init .`
+`energy init`
 
 执行命令在当前目录初始化并创建一个Golang的energy应用项目
 
@@ -79,7 +108,7 @@ CEF,liblcl根据当前系统环境安装
 
 |加载模式|说明|
 |-|-|
-|HTTP|常用http服务支撑资源加载, 通过网络请求|
+|HTTP|常规 http 服务支撑资源加载, 通过网络请求|
 |Local Load|本地资源加载 1. 支持本地读取 2. 支持内置二进制执行文件中读取|
 
 ##### 目录结构
@@ -94,15 +123,17 @@ CEF,liblcl根据当前系统环境安装
 >
 > go.mod 模块依赖管理, 文件名不可更改.
 >
-> go.sum 自动生成
+> go.sum 模块依赖管理, 自动生成
 >
-> main.go energy 应用启动入口程序
+> main.go Golang入口启动程序
 
 ---
 #### build - 构建&编译应用
 `energy build`
+
 在应用目录main函数位置执行
-energy 默认会去除调试信息和符号, 和压缩
+
+`energy build` 默认会去除调试信息和符号, 和压缩
 - 不同平台区别
 
 |平台|描述|
@@ -118,7 +149,6 @@ energy 默认会去除调试信息和符号, 和压缩
 |-p, --path|编译的应用根目录, 默认当前目录|all|
 |-u, --upx|如果安装了upx同时设置了该参数, 二进制文件将使用upx压缩, 默认未启用|all|
 |--upxFlag|upx参数, 默认空|all|
-|-d, --dll|内置dll, 编译时将(liblcl)内置到二进制文件中, 二进制文件会变大，同时不使用框架内的独立liblcl文件, 默认未启用|all|
 
 
 ```cmd
@@ -129,19 +159,20 @@ energy build -p /to/app/path -u --upxFlag="--best --no-color" -d
 ---
 #### package - 制作安装包
 `energy package`
+
 在应用根目录执行
-- 条件
-1. 构建&编译应用, 得到二进制执行文件
-2. 开发环境和energy.json须配置正确
-- 已安装
+##### 安装包制作条件
+1. 需先 build 应用, 得到二进制执行文件
+2. 开发环境和 energy.json 须配置正确
+3. 需安装以下软件包
 
-|平台|安装包制作程序|
-|-|-|
-|Windows|NSIS|
-|Linux|dpkg|
-|MacOS|pkgbuild|
+|平台 |安装包制作程序 |描述 |
+|-|-|-|
+|Windows |NSIS |通过energy cli安装 |
+|Linux |dpkg |系统自带 |
+|MacOS |pkgbuild |系统自带 |
 
-- 附加条件
+4. 附加条件
 
 |平台|软件包|
 |-|-|

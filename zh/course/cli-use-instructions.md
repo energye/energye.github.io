@@ -3,6 +3,35 @@
 ---
 ### energy cli
 
+先获取 `energy cli`，可使用`预编译`需下载, 也可`自行编译`
+
+#### 系统使用
+- Windows
+> 打开 cmd，输入命令
+```cmd
+energy-xxx.exe [options] [args]
+```
+
+- MacOS 和 Linux
+> 需要给 `energy cli` 执行权限
+```cmd
+chmod +x enrgy-xxx
+```
+> MacOS
+> 
+> 1. 需要安装 xcode。 Golang 编译或运行时所需
+> 
+> 2. 第一次运行命令时会阻止其运行
+>> 打开 `系统偏好设置`，然后选择 `安全性与隐私`。
+>>
+>> 在 `通用` 选项卡下，如果看到提示 `已阻止使用xxx`，点击“仍要打开”以允许该应用程序运行。
+> 
+> 然后再次运行即可执行
+```cmd
+energy-xxx [options] [args]
+```
+
+
 ### 命令参数
 `energy [options]`
 

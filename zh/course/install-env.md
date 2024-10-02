@@ -168,14 +168,17 @@ ENERGY_HOME
 > - 交叉环境: `GOARCH=amd64`
 > - 开启CGO: `CGO_ENABLED=1`
 
-#### Linux 
+## 其它依赖
+
+### Linux 
 > Linux 可能需要额外安装一些共享支持库
 > 
 > gtk3, libharfbuzz-gobject0
 
-#### 环境配置
-> ENERGY_HOME 环境变量
+### 环境配置
+> 环境变量: ENERGY_HOME=/EnergyFramework
 >> ENERGY_HOME 是 Energy 的开发环境变量, 开发时运行应用会从环境变量查找框架目录
+>>
 >> 也可不配置环境变量, 通过Go代码手动指定框架目录 `app.SetFrameworkDirPath`
 
 ## 命令行自动安装效果图

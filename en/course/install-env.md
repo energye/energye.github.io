@@ -152,15 +152,17 @@ ENERGY_HOME
 > - Cross environment: `GOARCH=amd64`
 > - Enable CGO: `CGO_ENABLED=1`
 
+## Other Dependent
 
-#### Linux
+### Linux
 > Linux Additional shared support libraries may need to be installed
 >
 > gtk3, libharfbuzz-gobject0
 
-### Environmental configuration
-> ENERGY_HOME Environmental
+## Environmental configuration
+> Environmental: ENERGY_HOME=/EnergyFramework
 >> ENERGY_ HOME is the development environment variable for Energy, and running the application during development will search for the framework directory from the environment variable
+>>
 >> You can also manually specify the framework directory through Go code without configuring environment variables `app.SetFrameworkDirPath`
 
 # Command line automatic installation rendering

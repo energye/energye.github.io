@@ -89,9 +89,13 @@ ENERGY_HOME
    开发环境变量
    ENERGY_HOME=/to/path/CEFFramework
 ```
+
 ---
+
 #### [版本下载](/course/download-version)
+
 ---
+
 #### Windows和Linux
 > 下载<font color="red">CEF和Energy</font>对应版本的动态链接库压缩包
 >
@@ -149,8 +153,11 @@ ENERGY_HOME
 >>>
 >>> liblcl.dylib - 文件
 
-##### Mac M1 M2
-> 对于 Mac ARM(M1, M2)架构, 开发环境和 Mac AMD64 一样
+##### Mac M系列
+> 对于 Mac ARM架构, 开发环境和 Mac x86 一样
+> 
+> 可使用 x86 架构包兼容运行，也可使用 ARM 专有架构
+> 
 > 在Mac ARM Go需要使用交叉编译, 设置Go的编译环境为 amd64, 和CGO支持
 > 通过 Rosetta2 兼容运行AMD架构应用
 > 需要额外安装
@@ -161,11 +168,15 @@ ENERGY_HOME
 > - 交叉环境: `GOARCH=amd64`
 > - 开启CGO: `CGO_ENABLED=1`
 
+#### Linux 
+> Linux 可能需要额外安装一些共享支持库
+> 
+> gtk3, libharfbuzz-gobject0
+
 #### 环境配置
 > ENERGY_HOME 环境变量
 >> ENERGY_HOME 是 Energy 的开发环境变量, 开发时运行应用会从环境变量查找框架目录
 >> 也可不配置环境变量, 通过Go代码手动指定框架目录 `app.SetFrameworkDirPath`
-
 
 ## 命令行自动安装效果图
 ### Windows

@@ -79,7 +79,9 @@ ENERGY_HOME
 ```
 
 ---
+
 ### [Download Link](https://energy.yanghy.cn/course/100/6364c5c2a749ba01d04ff485)
+
 ---
 ### Windows & Linux
 > Download <font color="red">CEF & Energy</font> Corresponding version of dynamic link library compression package
@@ -149,6 +151,12 @@ ENERGY_HOME
 > Compilation Environment Settings
 > - Cross environment: `GOARCH=amd64`
 > - Enable CGO: `CGO_ENABLED=1`
+
+
+#### Linux
+> Linux Additional shared support libraries may need to be installed
+>
+> gtk3, libharfbuzz-gobject0
 
 ### Environmental configuration
 > ENERGY_HOME Environmental

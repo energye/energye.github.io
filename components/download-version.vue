@@ -140,7 +140,7 @@ const event = {
     }
     // 当前energy最新版本支持的CEF版本号
     if (latestCEFVersionModule) {
-      let lcl = moduleLCL["liblcl"] // 如果 liblcl 没有 "-" 命名是最新版本
+      let lcl = moduleLCL["liblcl"] // 如果 liblcl 文件名没有 "-" 命名是最新版本
       if (lcl) {
         result.push({
           os: {}, // 不同系统的下载链接列表
@@ -178,11 +178,16 @@ const event = {
           let downloadSource = downloadSourceItem[moduleName][cfg.downloadSource]
           let tmpUrl = downloadSource.url
           let ver = module.v
-          // 当模块非 lcl 时，给下载链接的 osarch 全变成小写
           if (module.moduleName.indexOf("liblcl") === -1) {
+            // 当模块非 lcl 时，下载链接的 osarch 全变成小写
             tmpOSName = tmpOSName.toLowerCase()
           } else {
             ver = "v" + ver
+          }
+          // 下载源 sourceforge
+          if (downloadSource.label == "sourceforge") {
+            let major = ver.split("+")[0] // CEFVersion
+            tmpUrl = tmpUrl.replace("{major}", major)
           }
           // 下载地址占位符替换
           tmpUrl = tmpUrl.replace("{version}", ver)

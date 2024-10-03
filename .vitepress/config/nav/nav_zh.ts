@@ -19,6 +19,20 @@ export function navZH(): DefaultTheme.NavItem[] {
                 },
             ]
         },
+        {text: "论坛", link: "https://forum.yanghy.cn"},
+        {
+            text: "下载",
+            items:[
+              {
+                  text: "CLI",
+                  link: "https://sourceforge.net/projects/energye/files/cli/",
+              },
+              {
+                  text: "CEF & LCL",
+                  link: "https://sourceforge.net/projects/liblcl/files/",
+              },
+            ],
+        },
         {
             text: "关于",
             items: [
@@ -65,6 +79,5 @@ export function navZH(): DefaultTheme.NavItem[] {
             ],
             activeMatch: "/about",
         },
-        {text: "下载", link: "https://sourceforge.net/projects/liblcl/files/"},
     ]
 }

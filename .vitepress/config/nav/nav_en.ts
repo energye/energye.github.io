@@ -19,6 +19,20 @@ export function navEN(): DefaultTheme.NavItem[] {
                 },
             ]
         },
+        {text: "Forum", link: "https://forum.yanghy.cn"},
+        {
+            text: "Download", link: "https://sourceforge.net/projects/liblcl/files/",
+            items:[
+                {
+                    text: "CLI",
+                    link: "https://sourceforge.net/projects/energye/files/cli/",
+                },
+                {
+                    text: "CEF & LCL",
+                    link: "https://sourceforge.net/projects/liblcl/files/",
+                },
+            ],
+        },
         {
             text: "About",
             items: [
@@ -65,6 +79,5 @@ export function navEN(): DefaultTheme.NavItem[] {
             ],
             activeMatch: "/en/about",
         },
-        {text: "Download", link: "https://sourceforge.net/projects/liblcl/files/"},
     ]
 }

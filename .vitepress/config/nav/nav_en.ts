@@ -75,6 +75,15 @@ export function navEN(): DefaultTheme.NavItem[] {
                             link: "https://github.com/energye/wk",
                         },
                     ],
+                },
+                {
+                    text: "Acc Cert",
+                    items: [
+                        {
+                            text: "Honor Cert",
+                            link: "about/honorcert",
+                        },
+                    ],
                 }
             ],
             activeMatch: "/en/about",

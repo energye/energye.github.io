@@ -75,6 +75,15 @@ export function navZH(): DefaultTheme.NavItem[] {
                             link: "https://github.com/energye/wk",
                         },
                     ],
+                },
+                {
+                    text: "成就认证",
+                    items: [
+                        {
+                            text: "荣誉证书",
+                            link: "about/honorcert",
+                        },
+                    ],
                 }
             ],
             activeMatch: "/about",

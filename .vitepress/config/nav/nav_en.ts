@@ -81,7 +81,7 @@ export function navEN(): DefaultTheme.NavItem[] {
                     items: [
                         {
                             text: "Honor Cert",
-                            link: "about/honorcert",
+                            link: "/en/about/honorcert",
                         },
                     ],
                 }

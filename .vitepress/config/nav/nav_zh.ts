@@ -81,7 +81,7 @@ export function navZH(): DefaultTheme.NavItem[] {
                     items: [
                         {
                             text: "荣誉证书",
-                            link: "about/honorcert",
+                            link: "/about/honorcert",
                         },
                     ],
                 }

@@ -8,8 +8,8 @@
 
 - cmd: `energy init`
 - run cmd
-  -- 1. Input app name
-  -- 2. Select HTTP
+  1. Input app name
+  2. Select HTTP
 - Waiting for automatic creation and initialization of projects and dependency configurations
 - 
 #### Input app name

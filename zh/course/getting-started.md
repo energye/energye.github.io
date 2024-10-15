@@ -8,8 +8,8 @@
 
 - 命令: `energy init`
 - 执行命令后
-  -- 1. 输入应用名
-  -- 2. 选择 HTTP
+  1. 输入应用名
+  2. 选择 HTTP 
 - 等待自动创建并初始化项目和依赖配置
 #### 输入应用名
 ![init_name](/imgs/assets/init_name.png)

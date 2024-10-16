@@ -13,7 +13,14 @@
 3. 应用构建&编译
 4. 制作应用安装包
 
-### [MD5](https://sourceforge.net/projects/energye/files/cli/md5.txt)
+<script setup>
+import DownloadCLIComponent from '../../components/download-cli.vue'
+</script>
+
+### 版本 <DownloadCLIComponent />
+
+### MD5
+[Download](https://sourceforge.net/projects/energye/files/cli/md5.txt)
 
 | Platform | ARCH      | 32                                                                                   | 64                                                                                     |
 |----------|-----------|--------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------|

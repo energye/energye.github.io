@@ -13,7 +13,14 @@
 3. Application Build&Compilation
 4. Create application installation package
 
-### [MD5](https://sourceforge.net/projects/energye/files/cli/md5.txt)
+<script setup>
+import DownloadCLIComponent from '../../components/download-cli.vue'
+</script>
+
+### Version <DownloadCLIComponent />
+
+### MD5
+[Download](https://sourceforge.net/projects/energye/files/cli/md5.txt)
 
 | Platform | ARCH      | 32                                                                                   | 64                                                                                     |
 |----------|-----------|--------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------|

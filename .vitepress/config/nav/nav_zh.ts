@@ -67,14 +67,10 @@ export function navZH(): DefaultTheme.NavItem[] {
                             link: "https://github.com/energye/cef",
                         },
                         {
-                            text: "WebView2(wv)",
+                            text: "WebView",
                             link: "https://github.com/energye/wv",
-                        },
-                        {
-                            text: "Webkit(wk)",
-                            link: "https://github.com/energye/wk",
-                        },
-                    ],
+                        }
+                    ]
                 },
                 {
                     text: "成就认证",

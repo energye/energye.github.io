@@ -26,7 +26,6 @@ export default defineConfig({
         logo: {src: "/imgs/icon.png", width: 24, height: 24},
         search: {provider: "local", options: localSearchConfig()},
         socialLinks: [
-            {icon: 'github', link: 'https://github.com/energye/energy'},
             {
                 icon: {
                     svg: GiteeICO()
@@ -38,6 +37,10 @@ export default defineConfig({
                     svg: GitCodeICO()
                 },
                 link: 'https://gitcode.com/energye/energy'
+            },
+            {
+                icon: 'github',
+                link: 'https://github.com/energye/energy'
             }
         ],
         footer: footer()

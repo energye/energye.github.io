@@ -17,7 +17,7 @@
 ## 1、Automatically install the complete development environment - <span style="color: blue;">Online recommendation</span>
 
 ### Obtain the Energy command-line tool
-- Obtaining Method 1: Precompiled Command Line Tool [Download](/en//course/cli-download)
+- Obtaining Method 1: Precompiled Command Line Tool [Download](/en/course/cli-download)
 >
 > This method does not require manual installation of the Golang environment, and the energy command-line tool automatically installs Golang
 > This method can skip Method 2

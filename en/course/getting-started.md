@@ -31,13 +31,13 @@
 ### directory structure
 ![dir_struct](/imgs/assets/dir_struct.png)
 
-|Name |Type |DESC |
-|-|-|-|
-|resources |folder |The resource storage directory is created during initialization and can be customized or deleted |
-|energy.json |file |Project configuration file, created at initialization, file name cannot be modified, used for building and creating installation packages.|
-|go.mod, go.sum |file |Go module management, automatically generated|
-|README.md |file |The project description file, created during initialization, describes the current directory structure|
-|main.go |file |Energy Go applies the project main function to launch the entry file|
+| Name                    | Type   | DESC                                                                                                                                       |
+|-------------------------|--------|--------------------------------------------------------------------------------------------------------------------------------------------|
+| resources               | folder | The resource storage directory is created during initialization and can be customized or deleted                                           |
+| config/energy_[os].json | file   | Project configuration file, created at initialization, file name cannot be modified, used for building and creating installation packages. |
+| go.mod, go.sum          | file   | Go module management, automatically generated                                                                                              |
+| README.md               | file   | The project description file, created during initialization, describes the current directory structure                                     |
+| main.go                 | file   | Energy Go applies the project main function to launch the entry file                                                                       |
 
 
 ### Mac M1 M2

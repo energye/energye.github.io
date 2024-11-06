@@ -17,7 +17,7 @@
 ## 1、Automatically install the complete development environment - <span style="color: blue;">Online recommendation</span>
 
 ### Obtain the Energy command-line tool
-- Obtaining Method 1: Precompiled Command Line Tool [Download](https://energy.yanghy.cn/course/100/1694511322285207)
+- Obtaining Method 1: Precompiled Command Line Tool [Download](/en//course/cli-download)
 >
 > This method does not require manual installation of the Golang environment, and the energy command-line tool automatically installs Golang
 > This method can skip Method 2
@@ -55,7 +55,7 @@ run in（windows -> cmd）(linux or macosx -> terminal)
 > Automatically install all dependencies of the Energy framework using command-line tools, applicable: Window、Linux、MacOSX
 > Provided to users who have no network or have failed online installation and download
 ### Manually downloading binary frameworks
-> Obtain the latest version of CEF and corresponding liblcl dynamic library [Download](https://energy.yanghy.cn/course/6342d92c401bfe4d0cdf6065/6364c5c2a749ba01d04ff485)
+> Obtain the latest version of CEF and corresponding liblcl dynamic library [Download](/en/course/download-version)
 > 1. Create a framework download directory by executing the directory (at the same level) on the energy command line`EnergyFrameworkDownloadCache`
 > 2. Copy the downloaded CEF and liblcl compressed packages to`EnergyFrameworkDownloadCache`dir
 >>  <span style="color: red;">attention</span>: Cannot modify CEF and liblcl compressed package file names
@@ -80,7 +80,7 @@ ENERGY_HOME
 
 ---
 
-### [Download Link](https://energy.yanghy.cn/course/100/6364c5c2a749ba01d04ff485)
+### [Download Link](/en/course/download-version)
 
 ---
 ### Windows & Linux

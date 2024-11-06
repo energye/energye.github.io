@@ -4,7 +4,7 @@
 - [Github](https://github.com/energye/energy/releases)
 - [Gitee](https://gitee.com/energye/energy/releases)
 
-> Use [energy](https://energy.yanghy.cn/course/6342d92c401bfe4d0cdf6065/63511b14a749ba0318943f3a) command line tool automatic installation development environment
+> Use [energy cli](/en/course/cli-use-instructions) automatic installation development environment
 
 ### Energy CEF Version support
 
@@ -43,9 +43,9 @@ Current energy lags behind the latest stable version of CEF
 ### Windows XP
 Windows XP SP3, Go1.11 dev
 
-|LIBLCL Download|CEF Download| Golang |
-|-|-|-|
-| [WindowsXPSP3-64](https://energy.yanghy.cn/energye/liblcl/releases/download/windowsxpsp3/liblcl-49.WindowsXP_SP3_64.zip) <br> [WindowsXPSP3-32](https://energy.yanghy.cn/energye/liblcl/releases/download/windowsxpsp3/liblcl-49.WindowsXP_SP3_32.zip) | [Windows64](https://gitee.com/energye/assets/releases/download/cef/cef_binary_49.0.2623%20chromium-49.0.2623.110_windows64.zip) [Windows32](https://gitee.com/energye/assets/releases/download/cef/cef_binary_49.0.2623%20chromium-49.0.2623.110_windows32.zip) | [Windows64](https://studygolang.com/dl/golang/go1.11.13.windows-amd64.msi)  [Windows32](https://studygolang.com/dl/golang/go1.11.13.windows-386.msi) |
+| LIBLCL Download                                                                                                                                                                                                    | CEF Download                                                                                                                                                                                                                                                              | Golang                                                                                                                                               |
+|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [WindowsXPSP3-64](https://sourceforge.net/projects/liblcl/files/v2.3.7/liblcl-49.WindowsXP_SP3_64.zip) <br> [WindowsXPSP3-32](https://sourceforge.net/projects/liblcl/files/v2.3.7/liblcl-49.WindowsXP_SP3_32.zip) | [Windows64](https://sourceforge.net/projects/liblcl/files/CEF/49.0.2623/cef_binary_49.0.2623%2Bchromium-49.0.2623.110_windows64.zip) [Windows32](https://sourceforge.net/projects/liblcl/files/CEF/49.0.2623/cef_binary_49.0.2623%2Bchromium-49.0.2623.110_windows32.zip) | [Windows64](https://studygolang.com/dl/golang/go1.11.13.windows-amd64.msi)  [Windows32](https://studygolang.com/dl/golang/go1.11.13.windows-386.msi) |
 
 <script setup>
 import DownloadVersionComponent from '../../components/download-version.vue'

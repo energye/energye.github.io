@@ -23,7 +23,7 @@ go env -w GOPROXY=https://goproxy.cn,direct
 2. 安装energy开发环境
    <a>说明</a>：energy开发环境依赖，CEF,liblcl, Golang
    <a>注意</a>：energy打包后要和CEF必要文件在同一个目录，或者在开发时动态指定CEF目录.
-   开发环境使用energy命令行工具自动配置energy环境. 开发环境安装教程 -> [传送门](https://energy.yanghy.cn/course/100/63511b14a749ba0318943f3a)
+   开发环境使用energy命令行工具自动配置energy环境. 开发环境安装教程 -> [传送门](/en/course/install-env)
 
 3. Linux系统依赖于GTK3，有些系统可能未安装，我们需要手动安装.
 ```
@@ -31,12 +31,12 @@ sudo apt-get install libgtk-3-dev
 ```
 
 #### Q: 是否支持制作安装包？
-- A: 支持. [安装包制作教程](https://energy.yanghy.cn/course/100/636e397ba749ba01d04ff595)
+- A: 支持. [安装包制作教程](/en/course/build-package)
 
 ---
 
 #### Q: 怎么看是不是最新版本？
-- A: 在（Github [Releases](https://github.com/energye/energy/releases)）(Gitee [发行版](https://gitee.com/energye/energy/releases)) 版本号查看, 数字越大版本越新, 如有新版本发布建议更新最新版本.
+- A: 在 [Github Releases](https://github.com/energye/energy/releases) 版本号查看, 数字越大版本越新, 如有新版本发布建议更新最新版本.
 
 ---
 
@@ -48,7 +48,7 @@ go.mod
 
 require github.com/energye/energy/v2 [最新的发行版本号]
 ```
-- A2: 开发环境是否正确配置, 参考 [环境安装](https://energy.yanghy.cn/course/100/63511b14a749ba0318943f3a)
+- A2: 开发环境是否正确配置, 参考 [环境安装](/en/course/install-env)
 - A3: MacOSX 需要在命令行参数中增加 env=dev, 例如使用Goland开发工具，编译main程序配置,在Program arguments中添加env=dev
 - A4: Linux比较特殊， 需要注意默认使用的VF(views framework)窗口组件，即无法使用LCL的任何组件，如果创建了LCL组件则程序启动失败。
 - A5: Linux ARM 需要预加载libcef.so库

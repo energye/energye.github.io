@@ -1,21 +1,23 @@
 # 构建打包
 
-### energy 命令行工具, 制作安装包
+### energy cli
 
-|平台 |介绍 |描述 |
-|---|---|-------------------|
-|window |NSIS安装包制作工具 |可通过 energy cli 安装|
-|linux|dpkg 命令|系统自带 |
-|macos|energy 仅生成 xxx.app|系统自带 |
+| 平台     | 介绍                 | 描述                |
+|--------|--------------------|-------------------|
+| window | NSIS安装包制作工具        | 可通过 energy cli 安装 |
+| linux  | dpkg 命令            | 系统自带              |
+| macos  | energy 仅生成 xxx.app | 系统自带              |
 
 ---
 
-### Windows 安装包制作
+### 安装包制作
+`config/energy_[os].json`是自动生成应用配置文件，在编译和制作应用安装包时使用
 
-#### 应用配置文件 energy.json
-- energy.json是自动生成应用配置文件，在编译执行程序和应用安装包制作使用
+### Windows
 - info: 应用的二进制执行程序配置
 - nsis: 安装包程序配置
+
+#### config/energy_windows.json
 ```json
 {
   "name": "{{.Name}}",    // 应用名
@@ -55,15 +57,16 @@
 
 #### 构建二进制执行文件
 - 进入项目根目录执行编译命令
-  `energy build`
-- 根据 energy.json 配置文件 info 生成二进制文件
+
+`energy build`
 
 <img src="/imgs/assets/energy-windows-build.gif"/>
 
 #### 生成安装包程序
 - 进入项目根目录执行打包命令
-  `energy package`
-- 根据 energy.json 配置文件 nsis 生成安装包
+
+`energy package`
+
 - 安装包输出目录
   approotpath/build/windows/appname-install.exe
 
@@ -79,12 +82,11 @@ installer-tools.nsh
 
 ---------------------------
 
-### Linux 安装包制作
-
-#### 应用配置文件 energy.json
-- energy.json是自动生成应用配置文件，在编译执行程序和应用安装包制作使用
+### Linux
 - info: 应用的二进制执行程序配置
 - dpkg: 安装包程序配置
+
+#### config/energy_linux.json
 ```json
 {
   "name": "{{.Name}}",      // 应用名
@@ -117,23 +119,23 @@ installer-tools.nsh
 
 #### 构建二进制执行文件
 - 进入项目根目录执行编译命令
-  `energy build`
+
+`energy build`
 
 
 #### 生成安装包程序
 - 进入项目根目录执行打包命令
-  `energy package`
-- 根据 energy.json 配置文件 info 和 dpkg 生成安装包
+
+`energy package`
+
 - 安装包输出目录
   approotpath/build/linux/appname-install.deb
 
 
-### MacOS 应用包制作
+### MacOS
+- plist: 配置 xxx.app 的 Info.plist
 
-#### 应用配置文件 energy.json
-- energy.json是自动生成应用配置文件，在编译执行程序和应用安装包制作使用
-- plist: xxx.app Info.plist 文件配置
-
+#### config/energy_darwin.json
 ```json
 {
   "name": "{{.Name}}",    // 应用名
@@ -166,12 +168,14 @@ installer-tools.nsh
 
 #### 构建二进制执行文件
 - 进入项目根目录执行编译命令
-  `energy build`
+
+`energy build`
 
 
 #### 生成安装包程序
 - 进入项目根目录执行打包命令
-  `energy package`
-- 根据 energy.json 配置文件 plist 生成安装包
+
+`energy package`
+
 - 安装包输出目录
   approotpath/build/darwin/appname-install.app

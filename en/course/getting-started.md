@@ -40,10 +40,13 @@
 | main.go                 | file   | Energy Go applies the project main function to launch the entry file                                                                       |
 
 
-### Mac M1 M2
-> For the Mac ARM(M1, M2) architecture, the development environment is the same as for the Mac AMD64
-> In Mac ARM Go you need to use cross compilation, set the Go compilation environment to amd64, and CGO support
-> Run AMD architecture applications with Rosetta2 compatibility
+### MacOS
+> For the Mac M(series) architecture, the development environment is the same as the Mac AMD64.
+> 
+> When cross-compiling for Mac M(series) or amd64, you need to enable CGO support by setting `CGO_ENABLED=1`
+> 
+> Running amd64 applications on Mac M(series) requires running AMD64 architecture applications through Rosetta2 compatibility
+> 
 > Additional installation required
 > 1. GCC toolchain `brew install gcc`, Installation may also be required`xcode-select --install`
 > 2. Rosetta2 [Reference link](https://support.apple.com/en-us/102527)

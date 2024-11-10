@@ -39,10 +39,13 @@
 | main.go                 | 文件  | Energy Go应用项目main函数启动入口文件        |
 
 
-### Mac M1 M2
-> 对于 Mac ARM(M1, M2)架构, 开发环境和 Mac AMD64 一样
-> 在Mac ARM Go需要使用交叉编译, 设置Go的编译环境为 amd64, 和CGO支持
-> 通过 Rosetta2 兼容运行AMD架构应用
+### MacOS
+> 对于 Mac M(系列) 架构, 开发环境和Mac AMD64 一样
+> 
+> 在 Mac M(系列) 或 amd64 需要使用交叉编译时, 需要开启CGO支持: `CGO_ENABLED=1`
+> 
+> 在 Mac M(系列) 运行 amd64 应用需要通过 Rosetta2 兼容运行AMD64架构应用
+> 
 > 需要额外安装
 > 1. GCC工具链 `brew install gcc`, 还可能需要安装`xcode-select --install`
 > 2. Rosetta2 [参考链接](https://support.apple.com/zh-cn/HT211861)

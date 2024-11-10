@@ -8,19 +8,22 @@ export function head(): HeadConfig[] {
         // ['link', {rel: 'icon', type: 'image/svg+xml', href: '/vitepress-logo-mini.svg'}],
         ['link', {rel: 'icon', type: 'image/png', href: '/imgs/energy.png'}],
         ['meta', {name: 'theme-color', content: '#5f67ee'}],
-        ['meta', {property: 'og:type', content: 'website'}],
+        ['meta', {name: 'keywords', content: 'ENERGY,ENERGYGUI,CEF,GOGUI'}],
+        ['meta', {name: 'description', content: 'ENERGY是Go基于LCL和CEF(Chromium Embedded Framework)开发的GUI框架, 用于开发Windows、MacOS 和 Linux 跨平台桌面应用'}],
+        ['meta', {property: 'og:type', content: 'article'}],
         ['meta', {property: 'og:locale', content: 'cn'}],
-        ['meta', {property: 'og:title', content: 'Go, based LCL & CEF, build cross-platform desktop application'}],
+        ['meta', {property: 'og:title', content: 'ENERGY文档'}],
+        ['meta', {property: 'og:description', content: 'ENERGY是Go基于LCL和CEF(Chromium Embedded Framework)开发的GUI框架, 用于开发Windows、MacOS 和 Linux 跨平台桌面应用'}],
         ['meta', {
             property: 'og:keywords',
             content: 'Energy,GoGUI,GolangGUI,桌面应用,跨平台GUI,跨平台桌面应用,开源GUI,GoCEF,GolangCEF,Go桌面应用,Golang桌面应用,Golang构建跨平台应用'
         }],
         ['meta', {property: 'og:site_name', content: 'Go ENERGY'}],
         ['meta', {property: 'google-site-verification', content: 'y1ft7YSwR6LAzQsR3s2OBajPkbLz16MDC809PgeHYfI'}],
-        ['meta', {property: 'og:image', content: 'https://energye.github.io/imgs/energy.png'}],
-        ['meta', {property: 'og:url', content: 'https://energye.github.io'}],
     ]
     if (isGithub) { // energye.github.io
+        result.push(['meta', {property: 'og:image', content: 'https://energye.github.io/imgs/energy-277x156.png'}])
+        result.push(['meta', {property: 'og:url', content: 'https://energye.github.io'}])
         result.push(['script', {}, `
 window._hmt = window._hmt || [];
 (function() {
@@ -31,6 +34,8 @@ window._hmt = window._hmt || [];
 })();
 `])
     } else { // energy.yanghy.cn
+        result.push(['meta', {property: 'og:image', content: 'https://energy.yanghy.cn/imgs/energy-277x156.png'}])
+        result.push(['meta', {property: 'og:url', content: 'https://energy.yanghy.cn'}])
         result.push(['script', {}, `
 window._hmt = window._hmt || [];
 (function() {

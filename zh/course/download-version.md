@@ -25,13 +25,13 @@
 
 ### CEF 和 Liblcl 版本匹配
 
-|liblcl|CEF|Desc|OS|
-|-|-|-|-|
-|liblcl|CEF|Current energy-latest version|ALL|
-|liblcl-49|CEF-49|Support Windows XP SP3|Windows|
-|liblcl-87|CEF-87|Support Flash|ALL|
-|liblcl-106|CEF-106|Support Linux GTK2|Linux|
-|liblcl-109|CEF-109|Support Windows 7, 8/8.1 and Windows Server 2012|Windows|
+| liblcl     | CEF     | Desc                                             | OS      |
+|------------|---------|--------------------------------------------------|---------|
+| liblcl     | CEF     | Current energy-latest version                    | ALL     |
+| liblcl-49  | CEF-49  | Support Windows XP SP3                           | Windows |
+| liblcl-87  | CEF-87  | Support Flash                                    | ALL     |
+| liblcl-106 | CEF-106 | Support Linux GTK2                               | Linux   |
+| liblcl-109 | CEF-109 | Support Windows 7, 8/8.1 and Windows Server 2012 | Windows |
 
 <span style="color:red;">注:</span> 不同发行版本严格区分 liblcl 和 cef 版本号内的匹配
 

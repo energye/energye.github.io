@@ -30,12 +30,12 @@ Current energy lags behind the latest stable version of CEF
 
 ### CEF and Liblcl version matching
 
-|liblcl|CEF|desc|OS|
-|-|-|-|-|
-|liblcl-49|CEF-49|Support Windows XP SP3|Windows|
-|liblcl|CEF|Current energy-latest version, Including CEF 106.1.1|ALL|
-|liblcl-87|CEF-87|Support Flash|ALL|
-|liblcl-109|CEF-109|Support Windows 7, 8/8.1 and Windows Server 2012|Windows|
+| liblcl     | CEF     | desc                                                 | OS      |
+|------------|---------|------------------------------------------------------|---------|
+| liblcl-49  | CEF-49  | Support Windows XP SP3                               | Windows |
+| liblcl     | CEF     | Current energy-latest version, Including CEF 106.1.1 | ALL     |
+| liblcl-87  | CEF-87  | Support Flash                                        | ALL     |
+| liblcl-109 | CEF-109 | Support Windows 7, 8/8.1 and Windows Server 2012     | Windows |
 
 <span style="color:red;">Hint:</span> Strictly distinguish the matching between liblcl and cef version numbers in different distribution versions
 

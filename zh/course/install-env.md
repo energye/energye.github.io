@@ -77,7 +77,9 @@ energy install
 ---
 ### 3、手动安装开发环境
 #### 说明
+
 > 该方式完全手动安装开发环境，把命令行工具安装开发环境做的事情我们用手动操作一遍。
+
 ``` text
 使用压缩包文件
 CEF
@@ -99,11 +101,11 @@ ENERGY_HOME
 #### Windows和Linux
 > 下载<font color="red">CEF和Energy</font>对应版本的动态链接库压缩包
 >
-> 1. 新建文件夹ChromiumDemo(文件夹名称自己随意取)
-> 2. CEF 提取Release和Resources目录‘内’文件到ChromiumDemo文件夹
-> 3. Energy 提取动态链接库到ChromiumDemo文件夹
-> 4. 最终的目录结构
->>   ChromiumDemo文件夹目录
+> 1. 新建文件夹`CEFFramework`(文件夹名称自己随意取)
+> 2. 在下载的 `cef_xxx.tar.bz2` 压缩包中提取`Release`和`Resources`目录`内`文件到`CEFFramework`文件夹
+> 3. Energy 提取`liblcl`动态链接库到`CEFFramework`文件夹
+> 4. 配置环境变量 ENERGY_HOME=/to/path/CEFFramework
+>>  最终 CEFFramework 目录结构
 >>>  locales - 文件夹
 >>>
 >>>  cef_sandbox.lib - 文件
@@ -141,17 +143,19 @@ ENERGY_HOME
 >>>  vulkan-1.dll - 文件
 
 #### MacOS X
-> 下载CEF和Energy对应版本的动态链接库压缩包
-> 1. 新建文件夹ChromiumDemo(文件夹名称自己随意取)
-> 2. CEF 提取Release目录‘内’文件到ChromiumDemo文件夹
-> 3. Energy 提取动态链接库到ChromiumDemo文件夹
-> 4. 最终的目录结构
->> ChromiumDemo文件夹目录
+> 下载<font color="red"> CEF 和 Energy </font>对应版本的动态链接库压缩包
+> 1. 新建文件夹`CEFFramework`(文件夹名称自己随意取)
+> 2. 在下载的 `cef_xxx.tar.bz2` 压缩包中提取`Release`目录`内`文件到`CEFFramework`文件夹
+> 3. Energy 提取动态链接库到`CEFFramework`文件夹
+> 4. 配置环境变量 ENERGY_HOME=/to/path/CEFFramework
+>> 最终 CEFFramework 目录结构
 >>> Chromium Embedded Framework.framework - 文件夹
 >>>
 >>> cef_sandbox.a - 文件
 >>>
 >>> liblcl.dylib - 文件
+
+
 
 ##### Mac M系列
 > 对于 Mac ARM架构, 开发环境和 Mac x86 一样

@@ -99,7 +99,7 @@ ENERGY_HOME
 ---
 
 #### Windows和Linux
-> 下载<font color="red">CEF和Energy</font>对应版本的动态链接库压缩包
+> 下载<font color="red"> CEF 和 Energy </font>对应版本的动态链接库压缩包
 >
 > 1. 新建文件夹`CEFFramework`(文件夹名称自己随意取)
 > 2. 在下载的 `cef_xxx.tar.bz2` 压缩包中提取`Release`和`Resources`目录`内`文件到`CEFFramework`文件夹

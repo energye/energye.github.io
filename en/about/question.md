@@ -70,12 +70,13 @@ sudo apt-get install libgbm-dev
 ---
 
 #### Q: energy为什么在Linux不支持LCL组件
-- A1: energy在Linux提供了2种支持，GTK2、GTK3，原因是CEF 106.1.1是最后一个默认支持GTK2的版本，大于CEF 106.1.1 默认支持的GTK3，Energy 支持LCL组件，但需要使用GTK2，但由于CEF在Linux中`无法输入中文`同时CEF版本107.xx以后`默认使用GTK3`而不是`GTK2`。
-  -- 2个问题
-  --- Linux GTK2 无法输入中文，可以使用LCL组件
-  --- Linux GTK3 可以输入中文，但无法使用LCL组件
-  `目前尚未解决GTK2不能输入中文问题。如果不介意可以直接使用GTK2（CEF106.1.1）`
-  `对于GTK3也是一个很好的选择，相比GTK2更好用。因为我们是做应用而不是浏览器。`
+- A1: energy在Linux提供了2种支持，GTK2、GTK3 默认支持的GTK3，Energy 支持LCL组件，但需要使用GTK2，但由于CEF在Linux中`无法输入中文`。
+- 2个问题
+  1. Linux GTK2 无法输入中文，可以使用LCL组件
+  2. Linux GTK3 可以输入中文，但无法使用LCL组件
+```
+目前尚未解决GTK2不能输入中文问题。如果不介意可以直接使用GTK2
+```
 - A2: GTK3开发环境安装
 ```
 sudo apt-get install libgtk-3-dev
@@ -85,10 +86,13 @@ sudo apt-get install libgtk-3-dev
 
 #### Q: Linux & Linux-AArch64
 - liblcl.so
-  -- AMD架构在所有发行版中提供编译版本
-  -- AArch64架构在某些版本中会提供编译版本(目前仅提供在虚拟机中编译, 实体机中未测试)
+
 - GTK3
-  -- Linux和Linux-AArch64默认使用GTK3, 需要预先安装 `sudo apt-get install libgtk-3-dev`
-- Linux-AArch64
-  -- 运行程序之前，在命令行中增加该环境变量
-  -- `export LD_PRELOAD=/to/path/libcef.so`
+
+  Linux 和 Linux-AArch64 默认使用 GTK3, 依赖 `sudo apt-get install libgtk-3-dev`
+
+  openGL 控件依赖 `sudo apt-get install libharfbuzz-gobject0`
+
+- Linux-AArch64 运行程序之前，在命令行中增加该环境变量
+
+`export LD_PRELOAD=/to/path/libcef.so`

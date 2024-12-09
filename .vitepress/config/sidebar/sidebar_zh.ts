@@ -92,6 +92,10 @@ function document(): DefaultTheme.SidebarItem[] {
         {
             text: '版本升级',
             link: 'version-upgrade-releases'
+        },
+        {
+            text: '系统架构支持',
+            link: 'version-details'
         }
     ]
 }

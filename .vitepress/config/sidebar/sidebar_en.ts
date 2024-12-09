@@ -91,6 +91,10 @@ function document(): DefaultTheme.SidebarItem[] {
         {
             text: 'Version Upgrade',
             link: 'version-upgrade-releases'
+        },
+        {
+            text: 'System Arch Support',
+            link: 'version-details'
         }
     ]
 }

@@ -49,3 +49,13 @@ Therefore, energy no longer supports the operating system and specific architect
 | 89.0.18 Flash | ❌          | ✔️                     | ✔️             | ✔️           | ✔️          | ✔️           | ✔️           | ✔️        | ✔️          |
 | 49.0.2623     | ✔️         | ✔️                     | ✔️             | ❌            | ❌           | ❌            | ❌            | ❌         | ❌           |
 
+
+### System UI Widget
+
+| ENERGY - CEF  | Win32 | Cocoa | GTK2 | GTK3 |
+|---------------|-------|-------|------|------|
+| Latest        | ✔️    | ️✔️   | ✔️   | ✔️   |
+| 109.1.18      | ✔️    | ✔️    | ❌    | ✔️   | 
+| 101.0.18      | ✔️    | ✔️    | ✔️   | ❌    |
+| 89.0.18 Flash | ✔️    | ✔️    | ✔️   | ❌    | 
+| 49.0.2623     | ✔️    | ❌     | ❌    | ❌    | 

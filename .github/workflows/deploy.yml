@@ -55,19 +55,19 @@ jobs:
           path: ./docs/
 
       # 上传网站
-      #- name: Upload site
-      #  env:
-      #    # 在github仓库当前项目配置设置
-      #    AUTH_TOKEN: ${{ secrets.UPLOAD_SITE_AUTH_TOKEN }}
-      #    UPLOAD_URL: ${{ secrets.UPLOAD_SITE_URL }}
-      #  run: |
-      #    cd ./deploy
-      #    go build deploy.go
-      #    move deploy.exe ../
-      #    cd ../
-      #    dir
-      #    ./deploy.exe -github=true -site=false
-      #    ./deploy.exe -github=false -site=true
+      - name: Upload site
+        env:
+          # 在github仓库当前项目配置设置
+          AUTH_TOKEN: ${{ secrets.UPLOAD_SITE_AUTH_TOKEN }}
+          UPLOAD_URL: ${{ secrets.UPLOAD_SITE_URL }}
+        run: |
+          cd ./deploy
+          go build deploy.go
+          move deploy.exe ../
+          cd ../
+          dir
+          ./deploy.exe -github=true -site=false
+          ./deploy.exe -github=false -site=true
 
   # 部署工作
   deploy:

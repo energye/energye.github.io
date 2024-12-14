@@ -29,7 +29,7 @@
       },
       "1": {
         "label": "sourceforge",
-        "url": "https://sourceforge.net/projects/liblcl/files/CEF/{major}/cef_binary_{version}_{OSARCH}_minimal.7z"
+        "url": "https://sourceforge.net/projects/liblcl/files/CEF/{version}/cef_binary_{version}_{OSARCH}_minimal.7z"
       }
     },
     "golang": {

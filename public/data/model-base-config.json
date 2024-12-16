@@ -73,6 +73,10 @@
     "darwin": {
       "cef": ["Release/*"],
       "lcl": ["liblcl.dylib"]
+    },
+    "macos": {
+      "cef": ["Release/*"],
+      "lcl": ["liblcl.dylib"]
     }
   }
 }

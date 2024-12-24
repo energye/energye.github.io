@@ -1,20 +1,4 @@
 {
-  "liblcl": {
-    "2.3.1": {
-      "downloadSource": 3,
-      "downloadSourceList": [1, 2, 3],
-      "supportOSArch": "Windows64,Windows32,MacOSX64,MacOSARM64,LinuxARM64,Linux64"
-    },
-    "2.3.4": {"identical": "2.3.1"},
-    "2.3.5": {"identical": "2.3.1"},
-    "2.3.6": {"identical": "2.3.1"},
-    "2.3.7": {"identical": "2.3.1"},
-    "2.3.8": {
-      "downloadSource": 3,
-      "downloadSourceList": [1, 2, 3],
-      "supportOSArch": "Windows64,Windows32,MacOSX64,MacOSARM64,LinuxARM64,Linux64"
-    }
-  },
   "liblcl-87": {
     "2.3.1": {
       "downloadSource": 3,
@@ -47,6 +31,20 @@
       "supportOSArch": "LinuxARM64,Linux64"
     }
   },
+  "liblcl-89": {
+    "2.5.1": {
+      "downloadSource": 3,
+      "downloadSourceList": [1, 2, 3],
+      "supportOSArch": "Windows64,Windows32,MacOSX64,MacOSARM64,LinuxARM64,LinuxARM,Linux64,Linux32"
+    }
+  },
+  "liblcl-101": {
+    "2.5.1": {
+      "downloadSource": 3,
+      "downloadSourceList": [1, 2, 3],
+      "supportOSArch": "Windows64,Windows32,MacOSX64,MacOSARM64,LinuxARM64,LinuxARM,Linux64,Linux32"
+    }
+  },
   "liblcl-109": {
     "2.3.1": {
       "downloadSource": 3,
@@ -61,6 +59,32 @@
       "downloadSource": 3,
       "downloadSourceList": [1, 2, 3],
       "supportOSArch": "Windows64,Windows32"
+    },
+    "2.5.1": {
+      "downloadSource": 3,
+      "downloadSourceList": [1, 2, 3],
+      "supportOSArch": "Windows64,Windows32,MacOSX64,MacOSARM64,LinuxARM64,LinuxARM,Linux64"
+    }
+  },
+  "liblcl": {
+    "2.3.1": {
+      "downloadSource": 3,
+      "downloadSourceList": [1, 2, 3],
+      "supportOSArch": "Windows64,Windows32,MacOSX64,MacOSARM64,LinuxARM64,Linux64"
+    },
+    "2.3.4": {"identical": "2.3.1"},
+    "2.3.5": {"identical": "2.3.1"},
+    "2.3.6": {"identical": "2.3.1"},
+    "2.3.7": {"identical": "2.3.1"},
+    "2.3.8": {
+      "downloadSource": 3,
+      "downloadSourceList": [1, 2, 3],
+      "supportOSArch": "Windows64,Windows32,MacOSX64,MacOSARM64,LinuxARM64,Linux64"
+    },
+    "2.5.1": {
+      "downloadSource": 3,
+      "downloadSourceList": [1, 2, 3],
+      "supportOSArch": "Windows64,Windows32,MacOSX64,MacOSARM64,LinuxARM64,LinuxARM,Linux64"
     }
   }
 }

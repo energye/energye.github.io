@@ -9,7 +9,7 @@
           {{ option.label }}
         </option>
       </select>
-      <a :href="data.md5URL" target="_blank">MD5</a>
+<!--      <a :href="data.md5URL" target="_blank">MD5</a>-->
       <div>
         <!-- 版本下载信息 -->
         <table>
@@ -29,7 +29,10 @@
           <tr v-for="(module, key, i) in version.os">
             <td>{{ key }}</td>
             <td>
-              <a v-for="lcl in module.lcl" :href="lcl.url" target="_blank" style="margin-left: 5px;">{{ lcl.label }}</a>
+              <span v-for="(lcl, j) in module.lcl">
+                <br v-if="(j+1) % 4 === 0" />
+                <a :href="lcl.url" target="_blank" style="margin-left: 5px;">{{ lcl.label }}</a>
+              </span>
             </td>
             <td>
               <a v-for="cef in module.cef" :href="cef.url" target="_blank" style="margin-left: 5px;">{{ cef.label }}</a>
@@ -176,14 +179,23 @@ const event = {
         let tmpOSName = curSupportOSArch[i]
         if (tmpOSName.indexOf(osName) === 0) {
           let downloadSource = downloadSourceItem[moduleName][cfg.downloadSource]
+          let tmpLabel = tmpOSName
           let tmpUrl = downloadSource.url
+          let tmpModuleName = module.moduleName
           let ver = module.v
-          if (module.moduleName.indexOf("liblcl") === -1) {
-            // 当模块非 lcl 时，下载链接的 osarch 全变成小写
+          if (tmpModuleName.indexOf("liblcl") === -1) {
+            // 当模块非 LCL 时，是 CEF 下载链接的 osarch 全变成小写
             tmpOSName = tmpOSName.toLowerCase()
           } else {
             ver = "v" + ver
           }
+
+          // Linux[ARCH]GTK3
+          if (tmpOSName.indexOf("GTK3") != -1) {
+            tmpModuleName += "-GTK3"
+            tmpOSName = tmpOSName.replace("GTK3", "")
+          }
+
           // 下载源 sourceforge
           if (downloadSource.label == "sourceforge") {
             let major = ver.split("+")[0] // CEFVersion
@@ -191,11 +203,11 @@ const event = {
           }
           // 下载地址占位符替换
           tmpUrl = tmpUrl.replace("{version}", ver)
-          tmpUrl = tmpUrl.replace("{module}", module.moduleName)
+          tmpUrl = tmpUrl.replace("{module}", tmpModuleName)
           tmpUrl = tmpUrl.replace("{OSARCH}", tmpOSName)
           // 下载地址
           osURLs.push({
-            label: tmpOSName,
+            label: tmpLabel,
             url: tmpUrl
           })
         }

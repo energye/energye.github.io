@@ -35,14 +35,14 @@
     "2.5.1": {
       "downloadSource": 3,
       "downloadSourceList": [1, 2, 3],
-      "supportOSArch": "Windows64,Windows32,MacOSX64,MacOSARM64,LinuxARM64,LinuxARM,Linux64,Linux32"
+      "supportOSArch": "Windows64,Windows32,MacOSX64,MacOSARM64,Linux64,Linux32,LinuxARM64,LinuxARM"
     }
   },
   "liblcl-101": {
     "2.5.1": {
       "downloadSource": 3,
       "downloadSourceList": [1, 2, 3],
-      "supportOSArch": "Windows64,Windows32,MacOSX64,MacOSARM64,LinuxARM64,LinuxARM,Linux64,Linux32"
+      "supportOSArch": "Windows64,Windows32,MacOSX64,MacOSARM64,Linux64,Linux32,LinuxARM64,LinuxARM"
     }
   },
   "liblcl-109": {
@@ -63,14 +63,14 @@
     "2.5.1": {
       "downloadSource": 3,
       "downloadSourceList": [1, 2, 3],
-      "supportOSArch": "Windows64,Windows32,MacOSX64,MacOSARM64,LinuxARM64,LinuxARM,Linux64"
+      "supportOSArch": "Windows64,Windows32,MacOSX64,MacOSARM64,Linux64,LinuxARM64,LinuxARM,Linux64GTK3,LinuxARM64GTK3,LinuxARMGTK3"
     }
   },
   "liblcl": {
     "2.3.1": {
       "downloadSource": 3,
       "downloadSourceList": [1, 2, 3],
-      "supportOSArch": "Windows64,Windows32,MacOSX64,MacOSARM64,LinuxARM64,Linux64"
+      "supportOSArch": "Windows64,Windows32,MacOSX64,MacOSARM64,Linux64,LinuxARM64"
     },
     "2.3.4": {"identical": "2.3.1"},
     "2.3.5": {"identical": "2.3.1"},
@@ -79,12 +79,12 @@
     "2.3.8": {
       "downloadSource": 3,
       "downloadSourceList": [1, 2, 3],
-      "supportOSArch": "Windows64,Windows32,MacOSX64,MacOSARM64,LinuxARM64,Linux64"
+      "supportOSArch": "Windows64,Windows32,MacOSX64,MacOSARM64,Linux64,LinuxARM64"
     },
     "2.5.1": {
       "downloadSource": 3,
       "downloadSourceList": [1, 2, 3],
-      "supportOSArch": "Windows64,Windows32,MacOSX64,MacOSARM64,LinuxARM64,LinuxARM,Linux64"
+      "supportOSArch": "Windows64,Windows32,MacOSX64,MacOSARM64,Linux64,LinuxARM64,LinuxARM,Linux64GTK3,LinuxARM64GTK3,LinuxARMGTK3"
     }
   }
 }

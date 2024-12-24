@@ -2,19 +2,19 @@
   "cef-87": {
     "87.1.14+ga29e9a3+chromium-87.0.4280.141": {
       "downloadSource": 0,
-      "supportOSArch": "Windows64,Windows32,MacOSX64,MacOSARM64,LinuxARM64,LinuxARM,Linux64,Linux32"
+      "supportOSArch": "Windows64,Windows32,MacOSX64,MacOSARM64,Linux64,Linux32,LinuxARM64,LinuxARM"
     }
   },
   "cef-89": {
     "87.1.14+ga29e9a3+chromium-87.0.4280.141": {
       "downloadSource": 0,
-      "supportOSArch": "Windows64,Windows32,MacOSX64,MacOSARM64,LinuxARM64,LinuxARM,Linux64,Linux32"
+      "supportOSArch": "Windows64,Windows32,MacOSX64,MacOSARM64,Linux64,Linux32,LinuxARM64,LinuxARM"
     }
   },
   "cef-101": {
     "101.0.18+g367b4a0+chromium-101.0.4951.67": {
       "downloadSource": 0,
-      "supportOSArch": "Windows64,Windows32,MacOSX64,MacOSARM64,LinuxARM64,LinuxARM,Linux64,Linux32"
+      "supportOSArch": "Windows64,Windows32,MacOSX64,MacOSARM64,Linux64,Linux32,LinuxARM64,LinuxARM"
     }
   },
   "cef-106": {
@@ -26,19 +26,19 @@
   "cef-109": {
     "109.1.18+gf1c41e4+chromium-109.0.5414.120": {
       "downloadSource": 0,
-      "supportOSArch": "Windows64,Windows32,MacOSX64,MacOSARM64,LinuxARM64,LinuxARM,Linux64"
+      "supportOSArch": "Windows64,Windows32,MacOSX64,MacOSARM64,Linux64,LinuxARM64,LinuxARM"
     }
   },
   "cef-118": {
     "118.7.1+g99817d2+chromium-118.0.5993.119": {
       "downloadSource": 0,
-      "supportOSArch": "Windows64,Windows32,MacOSX64,MacOSARM64,LinuxARM64,LinuxARM,Linux64"
+      "supportOSArch": "Windows64,Windows32,MacOSX64,MacOSARM64,Linux64,LinuxARM64,LinuxARM"
     }
   },
   "cef-130": {
     "130.1.16+g5a7e5ed+chromium-130.0.6723.117": {
       "downloadSource": 0,
-      "supportOSArch": "Windows64,Windows32,MacOSX64,MacOSARM64,LinuxARM64,LinuxARM,Linux64"
+      "supportOSArch": "Windows64,Windows32,MacOSX64,MacOSARM64,Linux64,LinuxARM64,LinuxARM"
     }
   }
 }

@@ -190,3 +190,9 @@ ENERGY_HOME
 # Command line automatic installation rendering
 ## Windows
 ![Description](/imgs/assets/cmd-install.gif)
+
+
+### Environment installation failure
+Online installation may fail to obtain remote service resources due to network factors or other restrictions.
+
+config proxy: `energy env -w proxy:http://ip:port`

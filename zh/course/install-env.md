@@ -213,3 +213,9 @@ LibLCL 压缩包
 > 
 > 和 Windows 步骤完全一样
 > 不同，使用 Linux 版本即可
+
+
+### 环境安装失败
+在线安装，由于网络因素或其它限制，获取远程服务资源时可能会失败, 导致开发环境安装失败。
+
+配置 proxy: `energy env -w proxy:http://ip:port`

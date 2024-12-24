@@ -2,11 +2,11 @@
 
 ### energy cli
 
-| 平台     | 介绍                 | 描述                |
-|--------|--------------------|-------------------|
-| window | NSIS安装包制作工具        | 可通过 energy cli 安装 |
-| linux  | dpkg 命令            | 系统自带              |
-| macos  | energy 仅生成 xxx.app | 系统自带              |
+| 平台     | 介绍                       | 描述               |
+|--------|--------------------------|------------------|
+| window | NSIS安装包制作工具              | 通过 energy cli 安装 |
+| linux  | dpkg 命令                  | 系统自带             |
+| macos  | energy xxx.app 和 xxx.pkg | 系统自带             |
 
 ---
 
@@ -58,7 +58,7 @@
 #### 构建二进制执行文件
 - 进入项目根目录执行编译命令
 
-`energy build`
+`energy build` 构建生产执行程序, 需要 package 或 放置到 Framework 目录可运行
 
 <img src="/imgs/assets/energy-windows-build.gif"/>
 
@@ -68,7 +68,7 @@
 `energy package`
 
 - 安装包输出目录
-  approotpath/build/windows/appname-install.exe
+  approotpath/build/windows/[appname]-xxxx.exe
 
 <img src="/imgs/assets/energy-windows-package.gif"/>
 
@@ -120,7 +120,7 @@ installer-tools.nsh
 #### 构建二进制执行文件
 - 进入项目根目录执行编译命令
 
-`energy build`
+`energy build` 构建生产执行程序, 需要 package 或 放置到 Framework 目录可运行
 
 
 #### 生成安装包程序
@@ -129,7 +129,7 @@ installer-tools.nsh
 `energy package`
 
 - 安装包输出目录
-  approotpath/build/linux/appname-install.deb
+  approotpath/build/linux/[appname]-xxxx.deb
 
 
 ### MacOS
@@ -169,13 +169,15 @@ installer-tools.nsh
 #### 构建二进制执行文件
 - 进入项目根目录执行编译命令
 
-`energy build`
+`energy build`  构建生产执行程序, 需要 package 可运行
 
 
 #### 生成安装包程序
 - 进入项目根目录执行打包命令
 
-`energy package`
+`energy package` 仅生成 xxx.app 包
+
+`energy package --pkg` 生成 xxx.pkg 包
 
 - 安装包输出目录
-  approotpath/build/darwin/appname-install.app
+  approotpath/build/darwin/[appname]-xxxx.app

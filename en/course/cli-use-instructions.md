@@ -40,9 +40,9 @@ energy-xxx [options] [args]
 | bindata | Go版本小于1.16时绑定内嵌资源 |
 | build   | 编译&构建应用           |
 | cli     | cli 自身命令          |
-| env     | 查看开发环境变量          |
+| env     | 开发环境控制            |
 | gen     | windows生成ico和syso |
-| help    | energy [cmd] help |
+| help    | energy [cmd] -h   |
 | init    | 应用初始化             |
 | install | 环境安装              |
 | package | 制作应用安装包           |

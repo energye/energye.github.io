@@ -37,6 +37,28 @@
 >> `go install`
 
 ### Installation and development environment
+
+Run CMD
+1. Initialize the environment before
+
+`energy env` Looking at the environment, a list similar to the one below appears
+
+```cmd
+┌───────────────────────────────────────┐
+| Name      | Value                     |
+| ------------------------------------- |
+| Golang    |                           |
+| Root      | /Users/yanghy             |
+| Framework |                           |
+| NSIS      |                           |
+| 7z        |                           |
+| UPX       |                           |
+| Registry  | https://energye.github.io |
+| Proxy     |                           |
+└───────────────────────────────────────┘
+```
+`energy env -w root:/Users/yanghy/app` Modify the framework installation root directory, 'root: Replace it with your directory'
+
 Execute command
 ```cmd
 energy install .

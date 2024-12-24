@@ -4,14 +4,14 @@
 
 ## 开发环境依赖
 开发环境依赖Golang和CEF构建好的二进制框架。
-如果开发完到生产包后，此时除了Golang编译好的二进制执行程序，还需要捆绑CEF和liblcl。
+如果开发完到生产包后，此时除了Golang编译好的二进制执行程序，同时CEF和liblcl一起打包。
 
 下面列表是开发环境安装选项
 
 | 名称          | 平台             | 是否必须 | 说明             |
 |-------------|----------------|------|----------------|
 | Golang      | ALL            | 是    | Go语言开发环境       |
-| CEF, liblcl | ALL            | 是    | CEF框架          |
+| CEF, LibLCL | ALL            | 是    | CEF框架          |
 | NSIS        | Windows        | 否    | Windows安装包制作工具 |
 | UPX         | ALL            | 否    | 执行文件压缩工具       |
 | 7z          | Windows, Linux | 否    | CEF框架压缩工具      |
@@ -20,12 +20,11 @@
 
 ### 1、自动安装完整开发环境 - <span style="color: #2ba9f1;">在线 推荐</span>
 #### 说明
-使用energy命令行工具安装开发环境, 它通过网络下载CEF和liblcl, CEF二进制包在CEF官方构建仓库, 因此在国外可能下载失败, 如果失败请参考离线安装.
+使用energy命令行工具安装开发环境, 它通过网络下载CEF和liblcl, CEF二进制包在CEF官方构建仓库, 因此存在下载失败可能, 如果失败请参考离线安装.
 
-#### 获取 energy 命令行工具
-- 获取方式 一 预编译命令行工具 [下载地址](/course/cli-download)
+#### 获取 energy cli 命令行工具
+- 获取方式 一 预编译命令行工具 [下载 CLI](/course/cli-download)
 >
-> 该方式不需要手动安装Golang环境,  energy 命令行工具自动安装Golang.
 > 该方式可跳过方式二
 >
 - 获取方式 二 自行编译命令行工具
@@ -35,7 +34,7 @@
       >> `git clone https://github.com/energye/energy.git`
 >> 2. 下载依赖
       >> `go mod tidy`
->> 3. 进入energy/cmd/energy目录
+>> 3. 进入 energy/cmd/energy 目录
       >> `cd energy/cmd/energy`
 >>
 >> 执行命令 "go install" 安装命令行工具
@@ -44,15 +43,40 @@
 
 
 #### 安装开发环境
+
 执行命令
+1. 在此前初始化环境
+
+`energy env` 查看环境, 会显示类似下面的列表
+
+```cmd
+┌───────────────────────────────────────┐
+| Name      | Value                     |
+| ------------------------------------- |
+| Golang    |                           |
+| Root      | /Users/yanghy             |
+| Framework |                           |
+| NSIS      |                           |
+| 7z        |                           |
+| UPX       |                           |
+| Registry  | https://energye.github.io |
+| Proxy     |                           |
+└───────────────────────────────────────┘
+```
+`energy env -w root:/Users/yanghy/app` 修改 framework 安装根目录, `root:替换成你的目录`
+
+2. 执行安装命令
 ```cmd
 energy install
 ```
+
 直接在（windows -> cmd）(linux or macosx -> terminal) 中执行
-> linux 需要安装gtk, 默认energy依赖是GTK3.
-> GTK安装命令
+> linux 需要安装 gtk, 默认 energy 依赖是GTK3.
+
+安装命令
 - GTK3 `sudo apt-get install libgtk-3-dev`
 - GTK2 `sudo apt-get install libgtk2.0-dev`
+- OPENGL `sudo apt-get install libharfbuzz-gobject0`
 
 [关于 energy cli 使用](/course/cli-use-instructions)
 
@@ -61,51 +85,49 @@ energy install
 ### 2、自动安装开发环境 - <span style="color: #2ba9f1;">离线</span>
 #### 说明
 > 提供给无网络或在线安装下载失败的用户
+
 #### 工具获取
 > 参考: <span style="color: #2ba9f1;">方式1-在线安装</span>
-> 使用命令行工具自动安装Energy框架的所有依赖，适用: Window、Linux、MacOSX
+> 使用 energy cli 自动安装配置开发环境，适用: Window、Linux、MacOS
+
 #### 手动下载二进制框架
-> 获取最新版本CEF和对应liblcl动态库 [下载链接](/course/download-version)
-> 1. 在energy命令行执行目录(同级)创建框架下载目录`EnergyFrameworkDownloadCache`
-> 2. 将下载的CEF和liblcl压缩包复制到`EnergyFrameworkDownloadCache`目录中
->>  <span style="color: red;">注意</span>: 将CEF压缩包文件名里的`+`加号改为` `空格, 除此之外不能修改CEF和liblcl压缩包文件名
-> 3. 执行安装命令
-```cmd
-energy install
-```
+> 获取CEF和对应LibLCL动态库 [下载链接](/course/download-version)
+> 1. 在你希望安装的位置, 例如: `/app` , 在 `/app` 新建目录名为 `energy` 和 `EnergyFrameworkDownloadCache`
+> 2. 修改环境-安装根目录: `energy env -w root:/app`
+> 3. 将下载的 CEF 和 LibLCL 对应压缩包移动到 `EnergyFrameworkDownloadCache` 目录
+> 4. 安装
+>> `energy install` 注意: 如果不是最新版本, 例如带有版本号的 liblcl-109.xxx.zip `energy install --cef 109`
+
 
 ---
 ### 3、手动安装开发环境
-#### 说明
+#### 说明和准备
 
-> 该方式完全手动安装开发环境，把命令行工具安装开发环境做的事情我们用手动操作一遍。
-
-``` text
-使用压缩包文件
-CEF
+```
+该方式完全手动安装开发环境，把 cli 安装开发环境做的事情我们用手动操作一遍
+获取 CEF 和 LibLCL
+CEF 压缩包
    1. Windows和Linux只用到CEF的Release和Resources目录内的文件
    2. MacOSX只用到了Release目录内文件
-Energy
-   liblcl.xx文件
-ENERGY_HOME 
-   开发环境变量
-   ENERGY_HOME=/to/path/CEFFramework
+LibLCL 压缩包
+   liblcl.xx 文件
+.energy 环境配置
+   使用 energy env 命令修改环境参数
+   `energy env -w root:/framework/root/path 修改框架安装根目录
 ```
 
----
 
-#### [版本下载](/course/download-version)
+#### 开始
 
----
+> [CEF 和 LibLCL 版本下载](/course/download-version) 
+> 1. 下载好后，例如是`CEF 109 Windows64`版本. 在你希望安装的位置, 例如: `D:/app` , 在 `D:/app` 新建目录名为 `energy`
+> 2. 进入 `energy` 目录, 新建 framework 目录 `CEF-109_WINDOWS_64`, 规则: `CEF-[VER]_[OS]_[ARCH]`
+> 3. 将下载的 `cef_xxx.tar.bz2` 压缩包中提取`Release`和`Resources`目录`内`文件到`CEF-109_WINDOWS_64`文件夹
+> 4. 将下载的 `liblcl-xx.[OS][ARCH].zip` 内容提取到 `CEF-109_WINDOWS_64`文件夹
+> 5. 配置环境-框架根目录: `energy env -w root:D:/app`
+> 6. 配置环境-框架版本: `energy env -w framework:CEF-109_WINDOWS_64`
 
-#### Windows和Linux
-> 下载<font color="red"> CEF 和 Energy </font>对应版本的动态链接库压缩包
->
-> 1. 新建文件夹`CEFFramework`(文件夹名称自己随意取)
-> 2. 在下载的 `cef_xxx.tar.bz2` 压缩包中提取`Release`和`Resources`目录`内`文件到`CEFFramework`文件夹
-> 3. Energy 提取`liblcl`动态链接库到`CEFFramework`文件夹
-> 4. 配置环境变量 ENERGY_HOME=/to/path/CEFFramework
->>  最终 CEFFramework 目录结构
+>>  最终 CEF-109_WINDOWS_64 目录结构
 >>>  locales - 文件夹
 >>>
 >>>  cef_sandbox.lib - 文件
@@ -143,18 +165,21 @@ ENERGY_HOME
 >>>  vulkan-1.dll - 文件
 
 #### MacOS X
-> 下载<font color="red"> CEF 和 Energy </font>对应版本的动态链接库压缩包
-> 1. 新建文件夹`CEFFramework`(文件夹名称自己随意取)
-> 2. 在下载的 `cef_xxx.tar.bz2` 压缩包中提取`Release`目录`内`文件到`CEFFramework`文件夹
-> 3. Energy 提取动态链接库到`CEFFramework`文件夹
-> 4. 配置环境变量 ENERGY_HOME=/to/path/CEFFramework
->> 最终 CEFFramework 目录结构
+
+> [CEF 和 LibLCL 版本下载](/course/download-version)
+> 
+> 和 Windows 步骤完全一样
+> 
+> 不同的是提取 CEF 文件稍有不同, 和 framework 目录名不同 `CEF-109_DARWIN_64`
+>>  只提取 Release 到 `CEF-109_DARWIN_64`
+>> 
+>>  最终 CEF-109_DARWIN_64 目录结构
+>> 
 >>> Chromium Embedded Framework.framework - 文件夹
 >>>
 >>> cef_sandbox.a - 文件
 >>>
 >>> liblcl.dylib - 文件
-
 
 
 ##### Mac M系列
@@ -175,16 +200,16 @@ ENERGY_HOME
 ## 其它依赖
 
 ### Linux 
-> Linux 可能需要额外安装一些共享支持库
-> 
-> gtk3, libharfbuzz-gobject0
+> Linux 需要额外安装一些共享支持库
+
+安装命令
+- GTK3 `sudo apt-get install libgtk-3-dev`
+- GTK2 `sudo apt-get install libgtk2.0-dev`
+- OPENGL `sudo apt-get install libharfbuzz-gobject0`
 
 ### 环境配置
-> 环境变量: ENERGY_HOME=/EnergyFramework
->> ENERGY_HOME 是 Energy 的开发环境变量, 开发时运行应用会从环境变量查找框架目录
->>
->> 也可不配置环境变量, 通过Go代码手动指定框架目录 `app.SetFrameworkDirPath`
 
-## 命令行自动安装效果图
-### Windows
-![Description](/imgs/assets/cmd-install.gif)
+> [CEF 和 LibLCL 版本下载](/course/download-version)
+> 
+> 和 Windows 步骤完全一样
+> 不同，使用 Linux 版本即可

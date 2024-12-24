@@ -46,8 +46,6 @@ energy-xxx [options] [args]
 | init    | 应用初始化             |
 | install | 环境安装              |
 | package | 制作应用安装包           |
-| setenv  | 设置开发环境变量          |
-| upg     | 检查和更新当前energy cli |
 | version | 查看所有已发行版本         |
 
 ---

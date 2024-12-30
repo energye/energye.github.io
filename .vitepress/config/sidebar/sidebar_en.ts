@@ -23,6 +23,7 @@ function course(): DefaultTheme.SidebarItem[] {
             items: [
                 {text: 'Getting Started', link: 'getting-started'},
                 {text: 'Install Environment', link: 'install-env'},
+                {text: 'Use SDK Install Environment', link: 'install-sdk'},
                 {text: 'Download Version', link: 'download-version'},
             ]
         },

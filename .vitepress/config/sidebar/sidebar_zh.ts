@@ -23,6 +23,7 @@ function course(): DefaultTheme.SidebarItem[] {
             items: [
                 {text: '快速开始', link: 'getting-started'},
                 {text: '环境安装', link: 'install-env'},
+                {text: '使用SDK安装环境', link: 'install-sdk'},
                 {text: '版本下载', link: 'download-version'},
             ]
         },

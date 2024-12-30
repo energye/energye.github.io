@@ -1,5 +1,10 @@
 # 构建打包
 
+### 说明
+
+- energy cli 目前仅支持在当前系统制作安装包程序
+- 如果你想制作其它系统安装包，参考使用 `github actions` 方式 [demo-actions](https://github.com/energye/demo-actions)
+
 ### energy cli
 
 | 平台     | 介绍                       | 描述               |

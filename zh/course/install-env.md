@@ -78,7 +78,7 @@ energy install
 - GTK2 `sudo apt-get install libgtk2.0-dev`
 - OPENGL `sudo apt-get install libharfbuzz-gobject0`
 
-[关于 energy cli 使用](/course/cli-use-instructions)
+[关于 energy cli 使用](/course/)
 
 ---
 

@@ -18,14 +18,14 @@ energy-xxx.exe [options] [args]
 chmod +x enrgy-xxx
 ```
 > MacOS
->
+> 
 > 1. 需要安装 xcode。 Golang 编译或运行时所需
->
+> 
 > 2. 第一次运行命令时会阻止其运行
 >> 打开 `系统偏好设置`，然后选择 `安全性与隐私`。
 >>
 >> 在 `通用` 选项卡下，如果看到提示 `已阻止使用xxx`，点击“仍要打开”以允许该应用程序运行。
->
+> 
 > 然后再次运行即可执行
 ```cmd
 energy-xxx [options] [args]
@@ -189,9 +189,9 @@ config/energy_[os].json 应用配置,主要用于构建和制作安装包
 
 - 字段说明
 
-[Windows](/en/course/build-package#windows) -
-[Linux](/en/course/build-package#linux) -
-[MacOS](/en/course/build-package#macos)
+[Windows](/course/build-package#windows) - 
+[Linux](/course/build-package#linux) - 
+[MacOS](/course/build-package#macos)
 
 ##### 配置字段
 - project

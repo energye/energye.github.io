@@ -11,6 +11,8 @@
 
 现有 energy [发行版本](https://github.com/energye/energy/releases) 开发环境离线安装包
 
+一搬只在发布 LibLCL 新版本才发布 SDK
+
 - 目录 sdk/vx.x.x : 对应的发行版本号目录
 - 安装程序 sdk/vx.x.x/ENERGY-SDK_* : SDK 安装程序
 - 安装程序文件名: `ENERGY-SDK_[VER]_[CEF]_[OS][ARCH]`

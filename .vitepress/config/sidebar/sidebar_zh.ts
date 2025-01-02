@@ -31,9 +31,23 @@ function course(): DefaultTheme.SidebarItem[] {
             text: 'Energy CLI',
             collapsed: false,
             items: [
-                {text: '使用说明', link: 'cli-use-instructions'},
                 {text: '下载 CLI', link: 'cli-download'},
                 {text: '构建打包', link: 'build-package'},
+                {
+                    text: '使用命令',
+                    base: "/course/cli-use/",
+                    link: 'index',
+                    items: [
+                        {text: "1. env", link: 'cli-use-env'},
+                        {text: "2. install", link: 'cli-use-install'},
+                        {text: "3. init", link: 'cli-use-init'},
+                        {text: "4. build", link: 'cli-use-build'},
+                        {text: "5. package", link: 'cli-use-package'},
+                        {text: "6. cli", link: 'cli-use-cli'},
+                        {text: "7. update", link: 'cli-use-update'},
+                        {text: "8. version", link: 'cli-use-version'}
+                    ]
+                }
             ]
         },
         {text: '编译 liblcl', link: 'build-liblcl'},

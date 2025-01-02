@@ -24,7 +24,7 @@
 #### 1. 进入项目目录
 #### 2. 命令 `go run main.go`
 #### Linux-ARM(64)
-> 1. `export LD_PRELOAD="$ENERGY_HOME/libcef.so"`
+> 1. `export LD_PRELOAD="/your/install/framework/path/libcef.so"`
 > 2. `go run main.go`
 
 ### 目录结构

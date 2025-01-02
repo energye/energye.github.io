@@ -25,7 +25,7 @@
 #### 1. Enter the project directory
 #### 2. run go cmd: `go run main.go`
 #### Linux-ARM(64)
-> 1. `export LD_PRELOAD="$ENERGY_HOME/libcef.so"`
+> 1. `export LD_PRELOAD="/your/install/framework/path/libcef.so"`
 > 2. `go run main.go`
 
 ### directory structure

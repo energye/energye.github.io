@@ -1,7 +1,8 @@
 # Install Environment
 
 # Video Tutorials
-> [Link](https://www.bilibili.com/video/BV1MN411Q7a2/)
+- [Dev ENV Install](https://www.bilibili.com/video/BV1MN411Q7a2/)
+- [App Create、Build、Package](https://www.bilibili.com/video/BV1gv6mYdE5J/)
 
 # Development Environment Dependency
 | Name        | Platform       | illustrate                                   |

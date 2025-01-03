@@ -1,6 +1,8 @@
 # 环境安装
 
-> 视频教程 [链接](https://www.bilibili.com/video/BV1MN411Q7a2/)
+视频教程
+- [开发环境安装](https://www.bilibili.com/video/BV1MN411Q7a2/)
+- [应用创建、构建、安装包制作](https://www.bilibili.com/video/BV1gv6mYdE5J/)
 
 ## 开发环境依赖
 开发环境依赖Golang和CEF构建好的二进制框架。

@@ -6,6 +6,7 @@
 - [百度网盘](https://pan.baidu.com/s/1XdtfMxmM5YciLWFyC90l3Q?pwd=8b3y) 提取码: 8b3y
 - [移动云盘](https://caiyun.139.com/m/i?2jexCZksHP4od) 提取码: caea
 - [天翼云盘](http://cloud.189.cn/t/MreEzeuY7fue) 提取码: wtk0
+- [夸克网盘](https://pan.quark.cn/s/1dc97bb4280d)
 
 ### 说明
 

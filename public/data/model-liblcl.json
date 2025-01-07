@@ -83,7 +83,7 @@
     },
     "2.5.1": {
       "downloadSource": 3,
-      "downloadSourceList": [1, 2, 3],
+      "downloadSourceList": [0, 1, 3],
       "supportOSArch": "Windows64,Windows32,MacOSX64,MacOSARM64,Linux64,LinuxARM64,LinuxARM,Linux64GTK3,LinuxARM64GTK3,LinuxARMGTK3"
     }
   }

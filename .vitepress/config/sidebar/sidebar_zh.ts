@@ -111,6 +111,10 @@ function document(): DefaultTheme.SidebarItem[] {
         {
             text: '系统架构支持',
             link: 'version-details'
+        },
+        {
+            text: 'LCL 文档链接',
+            link: 'lazarus_lcl'
         }
     ]
 }

@@ -110,6 +110,10 @@ function document(): DefaultTheme.SidebarItem[] {
         {
             text: 'System Arch Support',
             link: 'version-details'
+        },
+        {
+            text: 'LCL Document Link',
+            link: 'lazarus_lcl'
         }
     ]
 }

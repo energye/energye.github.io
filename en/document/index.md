@@ -17,3 +17,6 @@
 - [Java-CEF](https://bitbucket.org/chromiumembedded/java-cef)
 - [cefpython](https://github.com/cztomczak/cefpython)
 - [Chromium](https://chromium.googlesource.com/chromium/src/)
+- 
+### Chromium Command Line
+https://peter.sh/experiments/chromium-command-line-switches

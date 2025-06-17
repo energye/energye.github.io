@@ -38,7 +38,8 @@
       "supportOSArch": "Windows64,Windows32,MacOSX64,MacOSARM64,Linux64,Linux32,LinuxARM64,LinuxARM"
     },
     "2.5.2": {"identical": "2.5.1"},
-    "2.5.3": {"identical": "2.5.1"}
+    "2.5.3": {"identical": "2.5.1"},
+    "2.5.4": {"identical": "2.5.1"}
   },
   "liblcl-101": {
     "2.5.1": {
@@ -47,7 +48,8 @@
       "supportOSArch": "Windows64,Windows32,MacOSX64,MacOSARM64,Linux64,Linux32,LinuxARM64,LinuxARM"
     },
     "2.5.2": {"identical": "2.5.1"},
-    "2.5.3": {"identical": "2.5.1"}
+    "2.5.3": {"identical": "2.5.1"},
+    "2.5.4": {"identical": "2.5.1"}
   },
   "liblcl-109": {
     "2.3.1": {
@@ -70,7 +72,8 @@
       "supportOSArch": "Windows64,Windows32,MacOSX64,MacOSARM64,Linux64,LinuxARM64,LinuxARM,Linux64GTK3,LinuxARM64GTK3,LinuxARMGTK3"
     },
     "2.5.2": {"identical": "2.5.1"},
-    "2.5.3": {"identical": "2.5.1"}
+    "2.5.3": {"identical": "2.5.1"},
+    "2.5.4": {"identical": "2.5.1"}
   },
   "liblcl": {
     "2.3.1": {
@@ -93,6 +96,7 @@
       "supportOSArch": "Windows64,Windows32,MacOSX64,MacOSARM64,Linux64,LinuxARM64,LinuxARM,Linux64GTK3,LinuxARM64GTK3,LinuxARMGTK3"
     },
     "2.5.2": {"identical": "2.5.1"},
-    "2.5.3": {"identical": "2.5.1"}
+    "2.5.3": {"identical": "2.5.1"},
+    "2.5.4": {"identical": "2.5.1"}
   }
 }

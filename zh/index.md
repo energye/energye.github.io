@@ -51,3 +51,5 @@ features:
         <img src="/imgs/banner/sys-menu.webp">
     </div>
 </div>
+
+我正在参加 Gitee 2025 最受欢迎的开源软件投票活动，快来给我投票吧！[https://gitee.com/activity/2025opensource?ident=I9NTFU](https://gitee.com/activity/2025opensource?ident=I9NTFU)

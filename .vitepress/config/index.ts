@@ -7,7 +7,7 @@ const isGithub = process.env.DOC_ENV === "github"
 
 let outDir = "./docs/" // npm run build:github
 if (!isGithub) {
-    outDir = "./site/" // npm run build
+    outDir = "./docs/" // npm run build
 }
 
 export default defineConfig({

@@ -43,7 +43,6 @@ func main() {
 		os.Exit(1)
 	}
 	wd, _ = filepath.Split(wd)
-	//wd = "E:\\SWT\\gopath\\src\\github.com\\energye\\energye.github.io"
 	println("current path:", wd)
 	var (
 		src     string

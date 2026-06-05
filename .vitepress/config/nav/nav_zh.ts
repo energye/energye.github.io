@@ -7,6 +7,14 @@ export function navZH(): DefaultTheme.NavItem[] {
         {text: "示例", link: "/examples", activeMatch: "/examples"},
         {text: "文档", link: "/document", activeMatch: "/document"},
         {
+            text: "v3 文档",
+            items: [
+                {text: "Designer 设计工具", link: "/v3/designer/Quick-Start"},
+                {text: "Energy 框架", link: "/v3/energy/Overview"},
+            ],
+            activeMatch: "/v3",
+        },
+        {
             text: latestVersion.version,
             items: [
                 {
@@ -55,7 +63,11 @@ export function navZH(): DefaultTheme.NavItem[] {
                     text: "相关项目",
                     items: [
                         {
-                            text: "Go Energy",
+                            text: "Energy Designer",
+                            link: "https://github.com/energye/designer",
+                        },
+                        {
+                            text: "Energy",
                             link: "https://github.com/energye/energy",
                         },
                         {

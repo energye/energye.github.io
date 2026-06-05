@@ -5,6 +5,8 @@ export function sidebarEN(){
         '/en/course/': {base: '/en/course/', items: course()},
         '/en/examples/': {base: '/en/examples/', items: examples()},
         '/en/document/': {base: '/en/document/', items: document()},
+        '/en/v3/designer/': {base: '/en/v3/designer/', items: v3Designer()},
+        '/en/v3/energy/': {base: '/en/v3/energy/', items: v3Energy()},
     }
 }
 
@@ -115,5 +117,99 @@ function document(): DefaultTheme.SidebarItem[] {
             text: 'LCL Document Link',
             link: 'lazarus_lcl'
         }
+    ]
+}
+
+function v3Designer(): DefaultTheme.SidebarItem[] {
+    return [
+        {
+            text: 'Getting Started',
+            collapsed: false,
+            items: [
+                {text: 'Quick Start', link: 'Quick-Start'},
+            ]
+        },
+        {
+            text: 'Core Features',
+            collapsed: false,
+            items: [
+                {text: 'UI Layout', link: 'UI-Layout'},
+                {text: 'Project Management', link: 'Project-Management'},
+                {text: 'Form Design', link: 'Form-Design'},
+                {text: 'Component Library', link: 'Component-Library'},
+                {text: 'Object Inspector', link: 'Object-Inspector'},
+                {text: 'Project Manager', link: 'Project-Manager'},
+                {text: 'Code Editor', link: 'Code-Editor'},
+            ]
+        },
+        {
+            text: 'Build & Release',
+            collapsed: false,
+            items: [
+                {text: 'Build & Run', link: 'Build-Run'},
+                {text: 'Package & Release', link: 'Package-Release'},
+                {text: 'Code Generation', link: 'Code-Generation'},
+            ]
+        },
+        {
+            text: 'Configuration',
+            collapsed: false,
+            items: [
+                {text: 'Environment Config', link: 'Environment-Config'},
+                {text: 'Application Config', link: 'Application-Config'},
+                {text: 'Build Options', link: 'Build-Options'},
+            ]
+        },
+        {
+            text: 'CLI Tools',
+            collapsed: false,
+            items: [
+                {text: 'CLI Command Tool', link: 'CLI-Command-Tool'},
+            ]
+        },
+        {
+            text: 'Auxiliary',
+            collapsed: false,
+            items: [
+                {text: 'View Management', link: 'View-Management'},
+                {text: 'Log Console', link: 'Log-Console'},
+                {text: 'Keyboard Shortcuts', link: 'Keyboard-Shortcuts'},
+            ]
+        },
+    ]
+}
+
+function v3Energy(): DefaultTheme.SidebarItem[] {
+    return [
+        {
+            text: 'Getting Started',
+            collapsed: false,
+            items: [
+                {text: 'Overview', link: 'Overview'},
+            ]
+        },
+        {
+            text: 'Core Features',
+            collapsed: false,
+            items: [
+                {text: 'Application Config', link: 'Application-Config'},
+                {text: 'Window Management', link: 'Window-Management'},
+                {text: 'WebView', link: 'WebView'},
+                {text: 'IPC Communication', link: 'IPC-Communication'},
+                {text: 'Local Resource Loading', link: 'Local-Resource-Loading'},
+                {text: 'Logging', link: 'Logging'},
+            ]
+        },
+        {
+            text: 'Advanced Features',
+            collapsed: false,
+            items: [
+                {text: 'Custom Components', link: 'Custom-Components'},
+                {text: 'System Tray', link: 'System-Tray'},
+                {text: 'Notifications', link: 'Notifications'},
+                {text: 'Menu Editing', link: 'Menu-Editing'},
+                {text: 'I18N', link: 'I18N'},
+            ]
+        },
     ]
 }

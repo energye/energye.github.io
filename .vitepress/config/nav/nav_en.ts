@@ -7,6 +7,14 @@ export function navEN(): DefaultTheme.NavItem[] {
         {text: "Examples", link: "/en/examples", activeMatch: "/examples"},
         {text: "Document", link: "/en/document", activeMatch: "/document"},
         {
+            text: "v3 Docs",
+            items: [
+                {text: "Designer Tool", link: "/en/v3/designer/Quick-Start"},
+                {text: "Energy Framework", link: "/en/v3/energy/Overview"},
+            ],
+            activeMatch: "/en/v3",
+        },
+        {
             text: latestVersion.version,
             items: [
                 {

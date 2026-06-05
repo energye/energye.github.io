@@ -52,7 +52,7 @@ window._hmt = window._hmt || [];
 export function footer() {
     let footerMessage = ''
     if (!isGithub) {
-        footerMessage = `<a href="https://beian.miit.gov.cn" target="_blank" data-v-62fb13f4="">京ICP备2022011663号-1</a><br>`
+        //footerMessage = `<a href="https://beian.miit.gov.cn" target="_blank" data-v-62fb13f4="">京ICP备2022011663号-1</a><br>`
     }
     footerMessage += '<span style="color: #2ba9f1;">GO<br>ENERGY</span>'
     // footerMessage += '<br><a href="https://forum.yanghy.cn" target="_blank">Forum</a>'
